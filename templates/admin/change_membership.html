@@ -1,0 +1,38 @@
+<table>
+<tr>
+	<td colspan="5" height="30">
+		Make changes to the desired user and click the coresponding submit button:<br />
+		Note: Leaving a option unchecked makes no changes to that property.
+	</td>
+</tr>
+</table>
+<table>
+<tr>
+	<td bgcolor="#FFFFCC"><b><font color="#990000">Name</font></b></td>
+	<td bgcolor="#FFFFCC"><b><font color="#990000">Username</font></b></td>
+	<td bgcolor="#FFFFCC" align="center"><b>Status</b></td>
+	<td bgcolor="#FFFFCC" align="center"><b>Membership</b></td>
+	<td bgcolor="#FFFFCC"></td>
+</tr>
+<loop name="searchresult">
+<form action="change_membership.php" method="post">
+<input type="hidden" name="step" value="2">
+<input type="hidden" name="user_id" value="{searchresult.user_id}">
+<tr>
+	<td bgcolor="#eeeeee"><a href="profile_view.php?user_id={searchresult.user_id}">{searchresult.name}</a></td>
+	<td bgcolor="#eeeeee">{searchresult.user}</td>
+	<td bgcolor="#eeeeee" align="center">
+		<input type="radio" name="status" value="1" {searchresult.active} />Active&nbsp;
+		<input type="radio" name="status" value="2" {searchresult.notactive} />Not active
+		<input type="radio" name="status" value="3" {searchresult.suspended} />Suspended
+	</td>
+	<td bgcolor="#eeeeee" align="center">
+		<input type="radio" name="membership" value="1" {searchresult.registered} />Regular&nbsp;
+		<input type="radio" name="membership" value="2" {searchresult.subscriber} />Paid&nbsp;
+		<input type="radio" name="membership" value="3" {searchresult.admin} />Admin
+	</td>
+	<td bgcolor="#eeeeee"><input type="submit" value="Change"/></td>
+</tr>
+</form>
+</loop name="searchresult">
+</table>

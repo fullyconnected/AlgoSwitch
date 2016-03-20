@@ -1,0 +1,263 @@
+{message}
+      <legend>{lang.ACCOUNT_INFO_EDIT}</legend>
+<div class="row">
+  <form class="form-horizontal" name="myform" id="myform" action="{relative_path}processors/accountinfo.php">
+    <div class="span6">
+  
+
+      <div class="control-group">
+        <label class="control-label">{lang.NAME}</label>
+        <div class="controls">
+          <input type="text" name="name" value="{name}"  >
+       
+        </div>
+	
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label">{sitelink}</label>
+        <div class="controls">
+          <input type="text" name="plink" value="{plink}">
+       
+        </div>
+	
+      </div>
+
+      
+      
+      
+  
+
+      <div class="control-group">
+        <label class="control-label">{lang.GENDER}</label>
+        <div class="controls">
+         <select name="gender">{gender_options}</select>
+       
+        </div>
+	
+      </div>
+  
+  
+  
+    <div class="control-group">
+        <label class="control-label">{lang.ACCOUNT_INFO_COUNTRIES} </label>
+        <div class="controls">
+        <select name="country" id="id_country" onchange="xrefresh_state();">
+	<option value="">{lang.ACCOUNT_INFO_CHOOSE_COUNTRY}</option>
+	{countriesx}
+	</select>
+       
+     </div>
+    </div>
+     
+     
+ 
+       <div class="control-group">
+        <label class="control-label">{lang.ACCOUNT_INFO_CHOOSE_REGION} </label>
+        <div class="controls">
+             <select name="state" id="id_state" onchange="xrefresh_city();">
+		<option value="">{lang.ACCOUNT_INFO_CHOOSE_STATE_REGION}</option>
+		{statesx}
+	</select>
+       
+     </div>
+       </div>
+       
+       
+       
+       <div class="control-group">
+        <label class="control-label">{lang.ACCOUNT_INFO_CHOOSE_CITIES} </label>
+        <div class="controls">
+             <select name="city" id="id_city">
+		<option value="">{lang.ACCOUNT_INFO_CHOOSE_CITY}</option>
+		{citiesx}
+	</select>
+       
+     </div>
+       </div>
+      
+      
+     <div class="control-group">
+     
+        <label class="control-label">{lang.ACCOUNT_INFO_POSTAL_CODE}</label>
+        <div class="controls">
+          <input type="text" name="zip" value="{zip}">
+       
+        </div>
+	
+      </div>
+      
+      
+ 
+ 
+    
+     <div class="control-group">
+     
+        <label class="control-label">{lang.ACCOUNT_INFO_STREET_ADDR}</label>
+        <div class="controls">
+        <input type="text" name="addr" value="{addr}">
+       
+        </div>
+	
+      </div>
+ 
+ 
+ 
+ 
+  <div class="control-group">
+     
+        <label class="control-label">{lang.ACCOUNT_INFO_PHONE}</label>
+        <div class="controls">
+       <input type="text" name="phone1" value="{phone1}">
+       
+        </div>
+	
+      </div>
+ 
+  
+  
+    <div class="control-group">
+     
+        <label class="control-label">{lang.ACCOUNT_INFO_WEBSITE}</label>
+        <div class="controls">
+      <input type="text" name="website" value="{website}">
+       
+        </div>
+	
+      </div>
+ 
+      
+      
+      
+      
+      
+      
+    <div class="control-group">
+     
+        <label class="control-label">{lang.ACCOUNT_INFO_BDAY}</label>
+        <div class="controls">
+ 
+ <select name="birthmonth">
+		{birthmonth_options}
+		</select><br />
+		
+		<select name="birthday" ><br />
+		{birthday_options}
+		</select><br />
+		<select name="birthyear">
+		{birthyear_options}
+		</select>	
+ 
+ 
+ 
+       
+        </div>
+	
+      </div>
+ 
+      
+      
+      
+      
+    <div class="control-group">
+     
+        <label class="control-label">{lang.ACCOUNT_INFO_PREF_LANG}</label>
+        <div class="controls">
+    <select name="lang">{language_options}</select>
+       
+        </div>
+	
+      </div> 
+      
+      
+
+      
+      
+      <button class="button btn btn-primary btn-large">{lang.SAVE}</button>
+      
+      
+      
+    </div>
+    
+    
+  </form>
+
+</div>
+<script type="text/javascript">
+
+
+function xrefresh_state()
+{
+    $("#id_state").attr("disabled", true);$("#id_state").html('');
+    var qs = $("#id_country").val();
+    if(qs == '') {
+        alert('You must specify a country !');
+    }
+    else {
+        $("#id_state").append(new Option('Please Wait ...'));
+        var state_options= new Array();
+        $.get("processors/accountinfo-ajax.php?action=refresh_state&country_id=" + qs, function(data){
+            eval(data); 
+                if(state_options.length > 0) {
+                    addOptions(state_options,document.getElementById('id_state'));
+        }  }  ); } 
+} 
+function xrefresh_city()
+{
+    $("#id_city").attr("disabled", true);$("#id_city").html('');
+    var qs = $("#id_state").val();
+    if(qs == '') {
+        alert('You must specify a state !');
+    }
+    else {
+        $("#id_city").append(new Option('Please Wait ...'));
+        var city_options= new Array();
+        $.get("processors/accountinfo-ajax.php?action=refresh_city&state_id=" + qs, function(data){
+            eval(data); 
+                if(city_options.length > 0) {
+                    addOptions(city_options,document.getElementById('id_city'));
+        }  }  ); } 
+}         
+function addOptions(cl,select_id) 
+{
+        if(select_id)
+        {  
+            $(select_id).removeAttr("disabled");$(select_id).html('');
+            for(var i = 0; i < cl.length; i++) {
+            select_id.options[i] = new Option(cl[i].text, cl[i].value);
+            }
+        }
+} 
+
+
+function update() {
+  $("#notice_div").html('Loading..'); 
+  $.ajax({
+    type: 'GET',
+    url: 'processors/accountinfo-ajax.php?action=refresh_city&state_id=',
+    timeout: 2000,
+    success: function(data) {
+      $("#some_div").html(data);
+      $("#notice_div").html(''); 
+      window.setTimeout(update, 10000);
+    },
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      $("#notice_div").html('Timeout contacting server..');
+      window.setTimeout(update, 60000);
+    }
+
+
+
+
+});
+
+
+
+
+
+
+}
+
+       
+</script>

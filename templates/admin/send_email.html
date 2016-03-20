@@ -1,0 +1,81 @@
+<h1>Send E-mail:</h1>
+<div id="main">
+<form name="myform" id="myform" action="email_process.php" method="post">
+
+<input type="hidden" name="act" value="-2" />
+
+<table width="100%">
+
+	<tr>
+
+		<td width="80%" ><a href="send_email_profession.php"><strong>Send by profession</strong></a></td>
+	</tr>
+
+	<tr>
+
+		<td class="tdgrey"><input type="radio" name="act" value="-3" {checked} /></td>
+
+		<td><strong>to an email address:</strong> <input type="text" name="email" value="{email}" onfocus="document.myform.elements[2].checked='true'" /></td>
+	</tr>
+
+	<tr>
+
+		<td class="tdgrey"><input type="radio" name="act" value="-2" {checked} /></td>
+
+		<td><strong>to a member:</strong> <input type="text" name="name" value="{name}" onfocus="document.myform.elements[4].checked='true'" /></td>
+	</tr>
+
+	<tr>
+
+		<td class="tdgrey"><input type="radio" name="act" value="-1" /></td>
+
+		<td><strong>to members who have not activated their membership</strong></td>
+	</tr>
+
+	<tr>
+	  <td class="tdgrey"><input type="radio" name="act" value="-5" /></td>
+	  <td><strong>to members who have not uploaded a picture.</strong> </td>
+	  </tr>
+	<tr>
+
+		<td class="tdgrey"><input type="radio" name="act" value="-4" /></td>
+
+		<td><strong>to all members</strong></td>
+	</tr>
+
+<loop name="genders">
+
+	<tr>
+
+		<td class="tdgrey"><input type="radio" name="act" value="{genders.gender_id}" /></td>
+
+		<td><strong>to all {genders.gender_name} members</strong></td>
+	</tr>
+</loop name="genders">
+
+	<tr>
+
+		<td class="tdgrey" valign="top"><b><strong>Subject:</strong></b></td>
+
+		<td><input type="text" name="subject" /></td>
+	</tr>
+
+	<tr>
+
+		<td class="tdgrey" valign="top"><strong>Message:</strong></td>
+
+		<td><textarea name="body" wrap="off" cols="50" rows="15" /></textarea></td>
+	</tr>
+
+	<tr>
+
+		<td></td>
+
+		<td align="center"><input type="submit" value="Send" />&nbsp;&nbsp;<input type="reset" /></td>
+	</tr>
+</table>
+
+</form>
+
+</div>
+

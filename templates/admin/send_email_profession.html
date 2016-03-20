@@ -1,0 +1,61 @@
+<h1>Send email by profession:</h1>
+<div id="main">
+<table>
+<form name="myform" id="myform" action="email_byprof_process.php" method="post">
+
+<input type="hidden" name="act" value="-2"></input> <table>
+
+	<tr>
+
+	
+		<td class="" align="right"><a href="send_email.php"><strong>Send Email</strong></a></td>
+
+	</tr>
+
+	</table>
+
+
+
+<table>
+
+	<loop name="professions">
+
+	<tr>
+
+		<td class="tdgrey"><input type="radio" name="act" value="{professions.profession_id}" /></td>
+
+		<td><strong>to all {professions.profession_name} members</strong></td>
+
+	</tr>
+
+</loop name="professions">
+
+	<tr>
+
+		<td class="tdgrey" valign="top"><b><strong>Subject:</strong></b></td>
+
+		<td><input type="text" name="subject" /></td>
+
+	</tr>
+
+	<tr>
+
+		<td class="tdgrey" valign="top"><strong>Message:</strong></td>
+
+		<td><textarea name="body"  cols="50" rows="15" /></textarea></td>
+
+	</tr>
+
+	<tr>
+
+		<td></td>
+
+		<td align="center"><input type="submit" value="Send" />&nbsp;&nbsp;<input type="reset" /></td>
+
+	</tr>
+
+</table>
+
+</form>
+</div>
+

@@ -1,0 +1,45 @@
+<div id="mainwide">
+<table cellspacing="1" cellpadding="4" width="100%" border="0">
+<tr>
+	<td colspan="9" height="20" align="center"><font class="alert">{message}</font></td>
+</tr>
+<tr>
+	<td colspan="9"><strong>Total results returned: {count}</strong><td>
+</tr>
+<tr>
+	<td colspan="9" align="center">{prevlink} {nextlink}<td>
+</tr>
+<tr class="adminheader" align="center">
+	<td><strong>User ID</strong></td>
+
+	<td><strong>Username</strong></td>
+
+	<td><strong>Country</strong></td>
+	<td><strong>Profession</strong></td>
+	<td><strong>Gender</strong></td>
+	<td><strong>Email</strong></td>
+    	<td><strong>Profile Link</strong></td>
+</tr>
+<loop name="foundmembers">
+<tr class="{foundmembers.myclass}">
+	<td style="font-size: 10px">{foundmembers.user_id}</td>
+	
+	<td style="font-size: 10px">{foundmembers.user} (<a style="font-size: 10px" href="{relative_path}do.php?act=delete&user_id={foundmembers.user_id}">del</a>)(<a style="font-size: 10px" href="{relative_path}manage_member.php?user_id={foundmembers.user_id}">Manage</a>)</td>
+	
+	<td style="font-size: 10px">{foundmembers.country}</td>
+	<td style="font-size: 10px">{foundmembers.profession}</td>
+	<td style="font-size: 10px">{foundmembers.gender}</td>
+	<td style="font-size: 10px"><a style="font-size: 10px" href="send_email.php?name={foundmembers.user}">{foundmembers.email}</a></td>
+    <td style="font-size: 10px"><a style="font-size: 10px" href="../{foundmembers.name}" title="View Member Profile" target=_blank>{foundmembers.name}</a> </td>
+    
+    
+</tr>
+</loop name="foundmembers">
+<tr>
+	<td colspan="9" height="20"><td>
+</tr>
+<tr>
+	<td colspan="9" align="center">{prevlink} {nextlink}<td>
+</tr>
+</table>
+</div>

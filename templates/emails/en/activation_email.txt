@@ -1,0 +1,15 @@
+Dear {name},
+
+You are one step away from completing your registration.
+Click the link below to activate your account:
+{baseurl}/activate.php?user_id={user_id}&act_code={act_code}
+
+Your username and password:
+
+Username: {username}
+Password: {password}
+
+
+Your activation code: {act_code}
+
+If the link above is not active, simply copy and paste to your browser address window

@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	function checkform() {
+		var the=document.myform;
+		if ((the.newemail.value=="") || (the.newemail.value.indexOf('@')==-1) || (the.newemail.value.indexOf('.',the.newemail.value.indexOf('@')+2)==-1) || (the.newemail.value.lastIndexOf('.')==the.newemail.value.length-1)) {
+			alert('{lang.CHANGE_EMAIL_ERROR}');
+			the.newemail.focus();
+			return false;
+		}
+
+		return true;
+	}
+
+</script>
+<div class="vitbg" align="center"><br /><font class="alert">{message}</font>
+
+  <table width="800" cellpadding="0" cellspacing="0" border="0">
+	  <tr>
+	    <td width="27%" align="left"><img src="{relative_path}images/rarrow.gif" border="0" alt="{name}" /> <b>{lang.CHANGE_EMAIL_HEADER}</b></td>
+	     
+        <td width="25%" align="right"></td>
+	  <tr>
+	    <td colspan="3" align="center"><div class="head_zoid"></div><br /><font class="alert">{message}</font> 
+        
+        </td>
+</tr>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="text">
+  
+
+
+<table cellpadding="10" cellspacing="0" border="0">
+
+<form method="post" name="myform" id="myform" action="{relative_path}processors/changemyemail.php" onsubmit="return(checkform())">
+<tr>
+<td align="left">
+{lang.CHANGE_EMAIL_MESS1}
+</td></tr>
+
+<td align="left"><font class=alert>{message}</font><br>
+<table cellpadding="2" cellspacing="2" border="0">
+<tr>
+<td><b>{lang.CHANGE_CURRENT_EMAIL}:</b></td><td>{curem}<input type="hidden" name="currentemail" value="{curem}"></td></tr><tr>
+<td><b>{lang.CHANGE_EMAIL_NEW}:</b></td><td><input type="text" name="newemail" value="{newem}" size="25" maxlength="50"></td></tr><tr>
+<td>&nbsp;</td><td><input type="submit" value="{lang.SAVE}"></form></td></table>
+<br><br>
+</td></tr></table>
+</div>
+</div>

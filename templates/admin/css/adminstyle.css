@@ -1,0 +1,394 @@
+*{
+	font-size:12px;
+}
+body {
+	font-weight: normal;
+	font-size: 13px;
+	font-family: helvetica,tahoma,verdana,sans-serif;
+}
+h2 {
+    font-size:18px;
+    color:#333;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+
+
+a {
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+a:visited {
+	color: 000000;
+}
+
+a:hover {
+	color: red;
+}
+
+td {
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+tr.adminheader {
+	font-size: 10px;
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	font-weight: bold;
+	color: #000000;
+	background-color: #C0CFE4;
+}
+
+.tablebgcolor {
+	background-color: #C0CFE4;
+	border:1px solid #cccccc;
+	
+}
+
+.tdgrey {
+	background-color: #C0CFE4;
+	color: #42689B;
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	font-size: 12px;
+	
+
+}
+
+.whitetext {
+	color: #000000;
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	font-size: 12px;
+}
+
+tr.trpar {
+	font-size: 8pt;
+	background: #C0CFE4;
+}
+
+tr.trimpar {
+	font-size: 8pt;
+	background: #f1f1f1;
+}
+
+.alert {
+	font-family:Trebuchet, Verdana, Lucida Grande, Sapir Sans, Tahoma, Sans-Serif;
+	font-size:12px;
+	color:#FF0000;
+	text-decoration:none;
+	font-weight:bold;
+}
+.subheadertext {
+
+	color: #cccccc;
+
+	font-family:Trebuchet, Verdana, Lucida Grande, Sapir Sans, Tahoma, Sans-Serif;
+
+	font-weight: bold;
+
+	font-size: 12px;
+
+	border:1px outset #4e0000;
+
+	padding-left:12px;
+
+	padding-top:3px;
+
+	padding-bottom:3px;
+
+	background-color:#4e0000;
+
+	background-repeat: repeat-x;
+
+	height:30px;
+
+
+
+}
+.menus {
+
+background-color:#f1f1f1;
+
+
+
+
+}
+#editor {width:100%;}
+
+
+/* Class for meny links */
+
+.menulinks {
+
+	color: #000000;
+
+	font-family:Trebuchet, Verdana, Lucida Grande, Sapir Sans, Tahoma, Sans-Serif;
+
+	font-weight: normal;
+
+	font-size: 13px;
+
+	text-decoration:none;
+
+}
+.caption{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    margin:10px;
+    font-size : 14px;
+    color:#C64934;
+}
+#result {
+    margin-left: 80px;
+	border: 1px solid #cccccc;
+	width: 348px;
+	background: #E9ECEF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    font-size : 12px;
+    padding:5px;
+    margin-bottom:20px;
+}
+#main {
+
+	border: 1px solid #cccccc;
+	width: 500px;
+	background: #F1F3F5;
+    font-family: Arial, Helvetica, sans-serif;
+	text-align:left;
+    font-weight:bold;
+    font-size : 12px;
+}	
+
+#mainwide {
+
+	border: 1px solid #cccccc;
+	background: #F1F3F5;
+    font-family: Arial, Helvetica, sans-serif;
+	text-align:left;
+    font-weight:bold;
+    font-size : 12px;
+}	
+
+#icon{
+    width:80px;
+    height:80px;
+    float:left;
+    background-image:url(images/icon.gif);
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+.ztd {
+  padding:3px;
+  border:1px solid #ccc;
+  border-collapse:collapse;
+}
+
+
+table.login {
+margin: 5px 0;
+}
+table.login th {
+padding: 0.5em 1em 0.5em 0;
+vertical-align: top;
+text-align: right;
+}
+table.login td {
+}
+table.login input.inputtext {
+width: 250px;
+color: #515348;
+}
+table.login select {
+padding: 3px;
+color: #515348;
+}
+table.login tr td.separator {
+padding: 10px 0 10px 0;
+}
+table.login tr td.separator div {
+border-top: 1px dotted #bbb;
+height: 0;
+line-height: 0;
+font-size: 0;
+}
+table.login span.tipinline {
+font-size: 0.9em;
+color: #777;
+}
+
+body.login div.error, body.login div.success {
+margin: 0 0 5px 0;
+text-align: center;
+}
+
+
+
+h1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 175%;
+	letter-spacing: -1px;
+	font-weight: normal;
+	line-height: 1.1;
+	color:#333;
+}
+
+.form {
+	margin:0;
+	padding:0;
+}
+#login_container {   
+	
+
+	margin:auto;
+	padding:10px;
+	
+}
+
+#leftSide {
+
+}
+#rightSide {
+	background-color:#fff;
+	width:200px;
+	padding:5px;
+	margin-top:10px;
+	float:right;
+	border:1px solid #CCC;
+	font:normal 12px Arial;
+	color:#666666
+}
+.clear {
+	clear:both;
+}
+.holder {
+	background-color:#fff;
+
+}
+.div_texbox {
+	width:347px;
+	float:right;
+	background-color:#f1f1f1;
+	height:35px;
+	margin-top:3px;
+	padding-top:5px;
+	padding-bottom:3px;
+	padding-left:5px;
+}
+
+
+.textbox:focus, .textbox:hover {
+	background-color:#F0FFE6;
+}
+
+.username {
+    	background-image: url(../images/16m.png);
+    	background-repeat: no-repeat;
+    	background-position:left;
+		width:285px;
+    	font:normal 18px Arial;
+    	color: #999999;
+    	padding:3px 5px 3px 19px;
+}
+.username:focus, .username:hover {
+	background-color:#F0FFE6;
+}
+   
+.password {
+    	background-image: url(../images/16s.png);
+    	background-repeat: no-repeat;
+   	background-position:left;
+	width:285px;
+    	font:normal 18px Arial;
+    	color: #999999;
+    	padding:3px 5px 3px 19px;
+}
+.password:focus, .password:hover {
+	background-color:#F0FFE6;
+}
+
+.button_div {
+	width:287px;
+	float:right;
+	background-color:#fff;
+	border:1px solid #ccc;
+	text-align:right;
+	height:35px;
+	margin-top:3px;
+	padding:5px 32px 3px;
+}
+.buttons {
+	background: #e3e3db;
+	font-size:12px; 
+	color: #989070; 
+	padding: 6px 14px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff #d8d8d0 #d8d8d0 #fff;
+	text-decoration: none;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+strong {
+	color:#555555;
+}
+.maintable {border: 1px #fff solid; background-color: #FFFFFF; width: 90%; padding: 0px;} /*main table for forum*/
+.regrow {font-family: Verdana,Sans-serif; color: #000000; font-weight: bold; background-color: #FFFFFF;font-size: 12px;} /*registration row, mainly here for symetry*/
+.headline {font-family: Verdana,Sans-serif;font-weight: bold;color: #42689B;background-color: #C0CFE4;font-size: 11px;} /*headline row, the first row that says forum name, topics, posts and such*/
+.catline {font-family: Verdana,Sans-serif;font-weight: bold;color: #000000;background-color: #CCCCCC;font-size: 12px;} /*the row with the category colors*/
+.forumrow {font-family: Verdana,Sans-serif; color: #000000;background-color: #F2F2F2;font-size: 12px;} /*color of the forum rows*/
+/* PROFILE TYPES ajax edit */
+table#Stargate {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table#Stargate thead tr th, table#Stargate tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table#Stargate thead tr .header {
+	background-image: url(images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table#Stargate tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table#Stargate tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table#Stargate thead tr .headerSortUp {
+	background-image: url(images/asc.gif);
+}
+table#Stargate thead tr .headerSortDown {
+	background-image: url(images/desc.gif);
+}
+table#Stargate thead tr .headerSortDown, table#Stargate thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+form{
+	margin:0;
+	padding:0;
+}
+.dv-table td{
+	border:0;
+}
+.dv-table input{
+border:1px solid #ccc;
+}
+
+

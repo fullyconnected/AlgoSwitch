@@ -1,0 +1,51 @@
+<script type="text/javascript">
+	var mode=1;
+	function check_uncheck(mode) {
+		var the=document.myform;
+		var trk=0;
+		for (var i=0;i<the.elements.length;i++) {
+			var e=the.elements[i];
+			if ((e.name!='del_all') && (e.type=='checkbox')) {
+				if (mode!= 1) {
+					e.checked=the.del_all.checked;
+				} else {
+				}
+			}
+		}
+	}
+	function set_action(newval) {
+			document.myform.action.value=newval;
+	}
+</script>
+{message}
+  
+<form action="processors/friends.php" method="get" name="myform" id="myform">
+<div class="row">
+
+      <legend>{lang.FRIENDS_MY}</legend>
+         
+
+          <a href="{relative_path}myfriends.php"><strong>{lang.FRIENDS_MY_C} ({friendcount})</a><br>
+          
+        <a href="{relative_path}friendsrequest.php"><strong>{lang.FRIENDS_REQUEST} ({friendrcount})</a>
+  
+                    <br />
+
+
+	<input type="checkbox" name="del_all" onclick="check_uncheck(0)" /> {lang.FRIENDS_SELECT_ALL}  |  
+	<input class="btn btn-danger btn-mini" type="submit" value="{lang.FRIENDS_DELETE}" onclick="set_action(1)">
+
+  </div>
+ <div class="container gallery">     
+   
+           
+        <ul class="thumbnails"> 
+        
+        
+        {friends}
+      
+      
+       <ul>
+</form>
+</div>
+{paging}  

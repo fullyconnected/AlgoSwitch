@@ -1,0 +1,50 @@
+<script type="text/javascript" src="js/listedit.js"></script>
+
+<div class="vitbg"><br /><font class="alert">{message}</font></div>
+  
+        <table width="800" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+	  <tr>
+	    <td width="27%" align="left"> <b>{lang.LIST_MANAGER_TITLE}</b></td>
+	     
+        <td width="25%" align="right"></td>
+	  <tr>
+	    <td colspan="3" align="center"><div class="head_zoid"></div><br />
+
+<table width="100%" cellpadding="10" cellspacing="2" border="0">
+  <tr valign="top">
+    <td>&nbsp;</td>
+    <td align="center"> 
+
+<table bgcolor="#cccccc" cellpadding="5" cellspacing="1">
+<tbody>
+
+	{MYLIST}
+
+
+ 
+
+	
+	
+	
+</table>
+
+</td>
+</tr>
+
+<table width="100%" cellpadding="2" cellspacing="2" border="0"><tr>
+<td align="center">
+
+<div align="center">
+<form method="post" name="myform" action="{relative_path}processors/manage_list.php" enctype="multipart/form-data">
+{lang.LIST_TITLE}: <input type="text" name="list_title" value="{list_title}" size="25" maxlength="25">
+
+<input type="submit" value="Save"></form>
+</div>
+
+
+
+
+</td>
+</tr></table>
+
+</td></tr></table>

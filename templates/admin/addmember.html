@@ -1,0 +1,163 @@
+<script language="javascript">
+	function checkform() {
+		var the=document.myform;
+		
+		if (the.plink.value=="") {
+			alert('You must enter a profile link');
+			the.name.focus();
+			return false;
+		}
+		if (the.username.value=="") {
+			alert('You must enter your name');
+			the.name.focus();
+			return false;
+		}
+		if (the.password.value=="") {
+			alert('You must enter a password');
+			the.password.focus();
+			return false;
+		}
+		if (the.password2.value=="") {
+					alert('You must re-enter your password in the confirm password box');
+					the.password.focus();
+					return false;
+		}
+		if ((the.email.value=="") || (the.email.value.indexOf('@')==-1) || (the.email.value.indexOf('.',the.email.value.indexOf('@')+2)==-1) || (the.email.value.lastIndexOf('.')==the.email.value.length-1)) {
+			alert('You must enter a valid email');
+			the.email.focus();
+			return false;
+		}
+		if (the.email2.value!=the.email.value) {
+			alert('Email addresses do not match.');
+			return false;
+		}
+		
+		if (the.birthmonth.value=="-2") {
+			alert('Please enter your birth month');
+			return false;
+		}
+		if (the.birthday.value=="-2") {
+			alert('Please enter your birth day');
+			return false;
+		}
+		if (the.birthyear.value=="-2") {
+			alert('Please enter your birth year');
+			return false;
+		}
+
+		return true;
+	}
+function explainprofilelink(){
+alert("Members profile link. EX: {plink2}/jordan");
+}
+</script>
+<h1>Add Member:</h1>
+<div id="mainwide">
+ <form method="post" name="myform" id="myform" action="../{relative_path}processors/addmember-admin.php" onsubmit="checkform()">
+<input type="hidden" name="step" value="1" />
+
+<table width="250" cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+
+
+
+    <td  bgcolor="#e1e4ea"><a href="javascript:explainprofilelink()">{plink2}/</a></td>
+    <td width="55%"><input type="text" name="plink" value="{plink}" size="25" maxlength="22" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Name:</strong></td>
+    <td><input type="text" name="name" value="{name}" size="25" maxlength="22" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Password:</strong></td>
+    <td><input type="password" name="password" value="{password}" size="25" maxlength="10" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Gender:</strong></td>
+    <td><select name="gender" size="1">
+      {gender_options}
+    </select></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Profile Type:</strong></td>
+    <td>
+      {profession_options}
+  </td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Email Address:</strong></td>
+    <td><input type="text" name="email" value="{email}" size="25" maxlength="50" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Country:</strong> </td>
+    <td><select name="country" size="1">
+      {country_options}
+    </select></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>State (US residents)</strong></td>
+    <td><select name="us_state">
+      {usstate_options}
+    </select></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>City:</strong></td>
+    <td><input type="text" name="city" value="{city}" size="25" maxlength="110" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Zip/Postal Code:</strong></td>
+    <td><input type="text" name="zip" value="{zip}" size="25" maxlength="35" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Birthday:</strong></td>
+    <td><select name="birthmonth" size="1">
+      
+      
+		{birthmonth_options}
+		
+    
+    </select>
+      <select name="birthday" size="1">
+        
+        
+		{birthday_options}
+		
+      
+      </select>
+      <select name="birthyear" size="1">
+        
+        
+        
+		{birthyear_options}
+		
+      
+      
+      </select></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Phone:</strong></td>
+    <td><input type="text" name="phone" value="{phone}" size="25" maxlength="35" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#e1e4ea"><strong>Bio:</strong></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#e1e4ea"><textarea name="my_diz" cols="50" rows="10" id="7" >{my_diz}</textarea></td>
+    </tr>
+  <tr>
+    <td><input class="" type="submit" value="Save" /> </td>
+  </tr>
+ 
+</table>
+<br /> 
+
+</table>
+	
+	</td>
+  
+  </tr>
+</table>
+</div>
+

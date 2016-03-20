@@ -1,0 +1,56 @@
+<h1>Suspend Members</h1>
+  <div id="main">
+<form action="suspend.php" method="post">
+
+<input type="hidden" name="step" value="2">
+
+<table>
+
+<tr>
+
+	<td colspan="5" height="30">Choose the member to suspend from the list bellow:</td>
+
+</tr>
+
+<tr class="adminheader" align="center">
+
+	<td>Suspend</td>
+
+	<td>Name</td>
+
+	<td>Username</td>
+
+	<td>Status</td>
+
+	<td>Membership</td>
+
+</tr>
+
+<loop name="searchresult">
+
+<tr>
+
+	<td bgcolor="#eeeeee" align="center"><input type="radio" name="user_id" value="{searchresult.user_id}"></td>
+
+	<td bgcolor="#eeeeee">{searchresult.name}</td>
+
+	<td bgcolor="#eeeeee">{searchresult.username}</td>
+
+	<td bgcolor="#eeeeee">{searchresult.status}</td>
+
+	<td bgcolor="#eeeeee">{searchresult.membership}</td>
+
+</tr>
+
+</loop name="searchresult">
+
+<tr>
+
+	<td colspan="5" align="center"><input type="submit" value="Suspend" /></td>
+
+</tr>
+
+</table>
+
+</form>
+</div>

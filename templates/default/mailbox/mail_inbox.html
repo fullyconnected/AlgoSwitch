@@ -1,0 +1,114 @@
+<script type="text/javascript">
+
+	var mode=1;
+
+	function check_uncheck(mode) {
+
+		var the=document.myform;
+
+		var trk=0;
+
+		for (var i=0;i<the.elements.length;i++) {
+
+			var e=the.elements[i];
+
+			if ((e.name!='del_all') && (e.type=='checkbox')) {
+
+				if (mode!= 1) {
+
+					e.checked=the.del_all.checked;
+
+				} else {
+
+				}
+
+			}
+
+		}
+
+	}
+
+	function set_action(newval) {
+
+			document.myform.action.value=newval;
+
+	}
+
+</script>
+
+
+<table class="table">
+
+  <tr>
+  <td> 
+  <a class="btn btn-mini" href="mailbox.php?mailbox=inbox">{lang.MAIL_INBOX}</a> 
+  <a class="btn btn-mini" href="mailbox.php?mailbox=outbox">{lang.MAIL_OUTBOX}</a> 
+  <a class="btn btn-mini" href="mailbox.php?mailbox=savedbox">{lang.MAIL_SAVED_BOX}</a>&nbsp;
+  <a class="btn btn-mini" href="mail_blocked.php">{lang.MAIL_BLOCKED}&nbsp;</a>
+  </td>
+  </tr>
+      <tr>    
+        <td>
+       {mailbox_name}
+        </td>
+      </tr>
+    </table>
+
+<table>
+
+<tr>
+	<td>
+    
+
+<form action="processors/mail_process.php" method="get" name="myform" id="myform">
+
+<input type="hidden" name="action">
+
+<input type="hidden" name="mailbox" value="{mailbox}">
+
+<input type="submit" class="btn" value="New" onclick="set_action(7)">
+
+<input type="submit" class="btn" value="Delete" onclick="set_action(4)">
+
+<input type="submit" class="btn" value="Save" onclick="set_action(8)">
+
+
+
+
+</td>
+</tr>
+</table>
+
+
+{message}
+
+<table class="table table-striped table-bordered table-condensed">  
+        <thead>  
+          <tr>  
+            <th class="hidden-phone"><img src="{tplurl}/images/unreadmail.gif" border="0" /></td> </th>  
+            <th><input type="checkbox" name="del_all" onclick="check_uncheck(0)" /></th>  
+            <th>{lang.MAIL_FROM}</th>  
+            <th>{lang.MAIL_SUBJECT}</th>  
+            <th>{lang.MAIL_DATE}</th>
+          </tr>  
+        </thead>  
+        <tbody>  
+        <loop name="mail_interface">
+          <tr>  
+            <td class="hidden-phone">{mail_interface.read_status}</td>  
+            <td><input type="checkbox" name="del[{mail_interface.i}]" value="{mail_interface.mail_id}" /></td>  
+            <td>{mail_interface.online_status} <b>{mail_interface.sender}</b><a class="link-mailbox-sender" href="{relative_path}{mail_interface.plink}">(view profile)</a></td>  
+            <td><a class="link-mailbox-subject" href="mail_read.php?mailbox={mailbox}&mail_id={mail_interface.mail_id}">{mail_interface.subject}</a></td>
+            <td>{mail_interface.date_sent}</td>
+          </tr>  
+          
+          </loop name="mail_interface">
+         
+        </tbody>  
+      </table>  
+      
+      
+      
+      
+
+

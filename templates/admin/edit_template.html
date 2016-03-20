@@ -1,0 +1,30 @@
+<h1>Edit: </h1> 
+{template_diz}:
+
+<table id="main" width="100%" border="0">
+
+	<form name="myform" id="myform" action="edit_template.php" method="post">
+
+<input type="hidden" name="act" value="{act}" />
+
+
+
+	<tr>
+
+		<td align="center"><textarea name="filecontent" wrap="off" cols="80" rows="20" />{filecontent}</textarea></td>
+
+	</tr>
+<tr>
+		<td><font class="alert">*</font> Take care not to delete the special {...} tags.<br /></td>
+
+	</tr>
+	<tr>
+
+		<td align="center"><input type="submit" value="Save" />&nbsp;&nbsp;<input type="reset" /></td>
+
+	</tr>
+
+</table>
+
+</form>
+

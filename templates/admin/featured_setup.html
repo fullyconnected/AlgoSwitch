@@ -1,0 +1,67 @@
+<h1>Featured Members:</h1>
+<div id="main">
+<table>
+
+<tr>
+
+	<td colspan="6" height="30">
+
+		Enter Member ID, Click ADD to feature member.<br />
+
+	</td>
+
+</tr>
+
+</table>
+
+<form action="featured_setup.php" method="post">
+
+<table>
+
+<tr class="adminheader">
+
+	<td></td>
+
+	<td>NAME</td>
+
+	<td></td>
+
+</tr>
+
+<loop name="featured">
+
+<input type="hidden" name="feat_id" value="{featured.feat_id}">
+
+<tr>
+
+	<td class="trpar"><a href="featured_setup.php?act=delete&feat_id={featured.feat_id}">Delete</a></td>
+
+	<td class="trpar">{featured.feat_name}</td>
+
+	<td class="trpar"></td>
+
+</tr>
+
+</loop name="featured">
+
+<tr>
+
+	<td>Members ID#</td>
+
+	<td>
+
+		<input type="text" name="user_id" value="{user_id}" size="25" maxlength="50">
+
+	</td>
+
+	<td><input type="submit" value="ADD"></td>
+
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+

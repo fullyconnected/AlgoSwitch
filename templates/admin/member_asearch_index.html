@@ -1,0 +1,263 @@
+<script type="text/javascript">
+	function checkform() {
+		var the=document.myform;
+		if (the.agemin.value>the.agemax.value) {
+			alert('The minimum searched age cannot be higher than the maximum searched age.');
+			the.agemax.focus();
+			return false;
+		}
+		if (the.heightmin.value>the.heightmax.value) {
+			alert('The minimum searched height cannot be higher than the maximum searched height.');
+			the.heightmax.focus();
+			return false;
+		}
+		if (the.weightmin.value>the.weightmax.value) {
+			alert('The minimum searched weight cannot be higher than the maximum searched weight.');
+			the.weightmax.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+<table width="70%">
+<tr>
+	<td height="20" align="center"><font class="alert">{message}</font></td>
+</tr>
+<tr>
+	<td align="center" valign="top">
+		<form method="post" name="myform" action="member_search_process.php" onsubmit="return(checkform())">
+		<input type="hidden" name="searchtype" value="3" />
+		<table cellspacing="5" cellpadding="0" border="0">
+		<tr>
+			<td align="right"><input type="submit" value="Go" />&nbsp;</td>
+			<td>&nbsp;<input type="reset" /></td>
+		</tr>
+		<tr>
+			<td>Search for:</td>
+			<td>
+				<select size="1" name="gender">
+				{gender_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Located In:</td>
+			<td>
+				<select name="country" size="1">
+								{country_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td>State(US only):</td>
+					<td>
+						<select name="us_state" size="1">
+						{state_options}
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>City:</td>
+					<td>
+						<input type="text" name="city" />
+					</td>
+				</tr>
+		<tr>
+		<td>Profession:</td>
+					<td>
+					
+						{profession_options}
+				
+					</td>
+				</tr>
+		<tr>
+			<td>Ethnicity:</td>
+			<td>
+			<select size="1" name="ethnicity">
+				{ethnic_background_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Age range:</td>
+			<td>
+				<select size="1" name="agemin">
+				{agemin_options}
+				</select>
+				and&nbsp;
+				<select size="1" name="agemax">
+				{agemax_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+
+			<td>Body type:</td>
+			<td>
+				<select name="body" size="1">
+				{bodytype_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Height range:</td>
+			<td>
+				<select name="heightmin" size="1">
+				{heightmin_options}
+				</select>
+				to&nbsp;
+				<br />
+				<select name="heightmax" size="1">
+				{heightmax_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Weight range:</td>
+			<td>
+				<select name="weightmin" size="1">
+				{weightmin_options}
+				</select>
+				to&nbsp;
+				<br />
+				<select name="weightmax" size="1">
+				{weightmax_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Color of hair:</td>
+			<td>
+				<select name="haircolor" size="1">
+				{haircolor_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td>Length of hair:</td>
+					<td>
+						<select name="hairlength" size="1">
+						{hairlength_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+		<td>Type of hair:</td>
+					<td>
+						<select name="hairtype" size="1">
+						{hairtype_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+
+		<td valign=top>Hair Pieces?</td>
+		<td>
+		<select size="1" name="hairpiece">
+			{hairpiece_options}
+		</select>
+</td>
+		</tr><tr>
+			<td>Color of eyes:</td>
+			<td>
+				<select name="eyecolor" size="1">
+				{eyecolor_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td>Shape of eyes:</td>
+					<td>
+						<select name="eyeshape" size="1">
+						{eyeshape_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+		<td>Eyebrow Specifics:</td>
+					<td>
+						<select name="eyebrows" size="1">
+						{eyebrows_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+		<td>Eyelash Specifics:</td>
+					<td>
+						<select name="eyelashes" size="1">
+						{eyelashes_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+		<td>Eyewear</td>
+					<td>
+				<select size="1" name="eyewear">
+						{eyewear_options}
+						</select>
+
+					</td>
+				</tr>
+		<tr>
+			<td>Shape of face:</td>
+			<td>
+				<select name="faceshape" size="1">
+				{faceshape_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Waist:</td>
+			<td>
+				<select name="waist" size="1">
+				{waist_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td>Chest:</td>
+					<td>
+						<select name="chest" size="1">
+						{chest_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+			<td>Dress/Shirt Size:</td>
+			<td>
+				<select name="dress_shirt" size="1">
+				{dress_shirt_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td>Hips/Inseam:</td>
+					<td>
+						<select name="hips_inseam" size="1">
+						{hips_inseam_options}
+						</select>
+					</td>
+				</tr>
+		<tr>
+			<td>Shoe Size:</td>
+			<td>
+				<select name="shoes" size="1">
+				{shoes_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>With pics only:</td>
+			<td>
+				<input type="checkbox" name="have_photo" />
+			</td>
+		</tr>
+		<tr>
+			<td align="right"><input type="submit" value="Go" />&nbsp;</td>
+			<td>&nbsp;<input type="reset" /></td>
+		</tr>
+		</table>
+		</form>
+	</td>
+</tr>
+</table>

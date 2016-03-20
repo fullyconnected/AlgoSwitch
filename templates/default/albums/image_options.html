@@ -1,0 +1,54 @@
+{message}
+
+
+<h4>{lang.ALBUMS_ALBUM}: <a href="{relative_path}myprofile_pictures.php?id={id}">{albumname}</h4>
+	<hr>      
+<form method="post" id="myform" action="{relative_path}processors/image_options.php">
+ 
+  <input type="hidden" name="photo" value="{photo}"  />
+  <input type="hidden" name="pid" value="{pid}"  />
+  <input type="hidden" name="id" value="{id}"  />
+
+<div>
+<img src="memberpictures/medthumbs/{photo}?{randy}" /> 
+<br>
+<a href="image_options.php?id={id}&photo={photo}&pid={pid}&rotate=cw"><img src="{tplurl}/images/rotateleft.gif" border="0"></a>
+<a href="image_options.php?id={id}&photo={photo}&pid={pid}&rotate=ccw"><img src="{tplurl}/images/rotateright.gif" border="0"></a>
+
+<br>
+
+
+<div>
+{lang.ALBUMS_MOVE_TO} {moveimage}
+
+</div>
+
+<div>
+{checkbox} 
+{mainimage}
+
+{lang.ALBUMS_MAIN_IMAGE}
+</div>
+
+
+<br>
+<div>
+{lang.ALBUMS_IMAGE_OPTIONS_TITLE_TXT}
+
+<br>
+<input type="text" name="imgtitle" value="{imgtitle}" />
+</div>
+
+
+<div>
+{lang.ALBUMS_IMAGE_OPTIONS_TITLE_TXT_1}<br />
+ <textarea name="caption" rows="5" cols="60" >{caption}</textarea>
+ </div>
+
+
+<div> 
+ 
+<input class="btn btn-primary" type="submit" value="save"></form>
+</div>
+
+

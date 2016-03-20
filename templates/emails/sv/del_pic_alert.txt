@@ -1,0 +1,10 @@
+Hello {name},
+
+The site administrator at {sitename} has deleted one of your pictures. Possible reasons for the deletion of your photo include nudity, poor quality of resolution, image is displaying as cropped photo and you are not visible in the portion that is displayed, you had too many photos uploaded, the poses in the photo could be construed to be X-rated.
+
+Please replace the deleted photo with a more appropriate photo. 
+
+Regards,
+{sitename}
+
+For any problem regarding our site please contact {contactusmail}

@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	function add_skin() {
+		var current_location=window.location.toString();
+		var separator='?';
+		var start_skin=0;
+		var new_location="";
+		if (current_location.indexOf("?")!=-1) {
+			separator='&';
+		}
+		new_location=current_location;
+		if ((start_skin=current_location.indexOf("skin="))!=-1) {
+			var next_ampersand=current_location.indexOf('&',start_skin);
+			new_location=current_location.substr(0,start_skin)+'skin='+document.skin_changer.skin[document.skin_changer.skin.selectedIndex].value;
+			if (next_ampersand==-1) {
+				next_ampersand=current_location.length;
+			} else {
+				new_location+=current_location.substr(next_ampersand,current_location.length-next_ampersand);
+			}
+
+		} else {
+			new_location=current_location+separator+'skin='+document.skin_changer.skin[document.skin_changer.skin.selectedIndex].value;
+		}
+		window.location=new_location;
+	}
+</script>
+<div id="choose_theme">
+<form name="skin_changer" id="skin_changer">
+<strong>Theme:</strong> <select name="skin" onchange="add_skin()">
+	{skin_options}
+	</select>
+</form>
+</div>

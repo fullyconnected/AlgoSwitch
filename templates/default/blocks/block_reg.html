@@ -1,0 +1,162 @@
+
+<meta name="description" content="Make a profile"/>
+<script type="text/javascript">
+function xrefresh_state()
+
+{
+	$("#id_state").attr("disabled", true);$("#id_state").html('');
+
+    var qs = $("#id_country").val();
+
+    if(qs == '') {
+
+      //  alert('You must specify a country !');
+
+    }
+
+    else {
+
+        $("#id_state").append(new Option('Please Wait ...'));
+
+        var state_options= new Array();
+
+        $.get("processors/registration-ajax.php?action=refresh_state&country_id=" + qs, function(data){
+
+            eval(data); 
+
+		        if(state_options.length > 0) {
+
+                    addOptions(state_options,document.getElementById('id_state'));
+
+  
+
+		}  }  ); } 
+
+} 
+
+function xrefresh_city()
+
+{
+
+    $("#id_city").attr("disabled", true);$("#id_city").html('');
+
+    var qs = $("#id_state").val();
+
+    if(qs == '') {
+
+        //alert('You must specify a state !');
+
+    }
+
+    else {
+
+        $("#id_city").append(new Option('Please Wait ...'));
+
+        var city_options= new Array();
+
+        $.get("processors/registration-ajax.php?action=refresh_city&state_id=" + qs, function(data){
+
+            eval(data); 
+
+                if(city_options.length > 0) {
+
+                    addOptions(city_options,document.getElementById('id_city'));
+
+        }  }  ); } 
+
+}         
+
+function addOptions(cl,select_id) 
+
+{
+
+        if(select_id)
+
+        {  
+
+            $(select_id).removeAttr("disabled");$(select_id).html('');
+
+            for(var i = 0; i < cl.length; i++) {
+
+            select_id.options[i] = new Option(cl[i].text, cl[i].value);
+
+            }
+
+        }
+
+} 
+function update() {
+
+  $("#notice_div").html('Loading..'); 
+
+  $.ajax({
+
+    type: 'GET',
+
+    url: 'processors/registration-ajax.php?action=refresh_city&state_id=',
+
+    timeout: 2000,
+
+    success: function(data) {
+
+      $("#some_div").html(data);
+
+      $("#notice_div").html(''); 
+
+      window.setTimeout(update, 10000);
+
+    },
+
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+      $("#notice_div").html('Timeout contacting server..');
+
+      window.setTimeout(update, 60000);
+
+    }
+});
+
+}
+
+$(document).ready(function(){
+
+
+    $(".ADVANCED").hide();
+
+	$(".show_hide").show();
+
+	
+
+	$('.show_hide').click(function(){
+
+	$(".ADVANCED").slideToggle('slow');
+
+
+	});
+
+
+$('#loader')
+
+    .hide()  // hide it initially
+
+    .ajaxStart(function() {
+
+        $(this).show();
+
+    })
+
+    .ajaxStop(function() {
+
+        $(this).hide();
+
+    });
+
+
+
+
+
+});
+
+
+
+</script>

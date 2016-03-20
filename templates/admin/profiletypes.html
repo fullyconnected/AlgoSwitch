@@ -1,0 +1,44 @@
+<h1>Profile Types</h1>
+<table cellpadding="0" cellspacing="0" width="100%" id="Stargate" >
+	<thead>
+	<tr>  <th>
+        <th>Profile Number</th>
+   		<th>Title</th>
+  <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+{data}
+
+
+</tbody>
+</table>
+  <div id="statusMsg"></div>
+
+<table width="100%" border="0">
+  <form onsubmit="ajaxAdd()">
+
+  <tr>
+    <td>
+  
+    <label for="pid">Profile Number:</label>
+<input type="text" value="" id="pid" />
+
+</td>
+    <td>
+    
+    <label for="ptitle">Title:</label>
+<input type="text" value="" id="ptitle" />
+
+  
+
+
+
+
+</td>
+    <td><input type="button" value="Save this!" onclick="ajaxAdd()" /><img src="../images/delete.gif" id="loading" style="display:none;" />
+</td>
+  </tr></form>
+</table>
+
+

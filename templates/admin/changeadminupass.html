@@ -1,0 +1,40 @@
+<h1>Change administrators email/password</h1>
+<div id="main">
+
+
+
+<form action="changeadminupass.php" method="post">
+<div align=center><table width=90%>
+	<tr>
+		<td>
+		<b>Enter the new email and/or password for the admin</b><P>
+		<i>If you're not planning to change the email leave the "New email" box empty. If changing the email but not the password, leave both password boxes empty.
+		</i>
+		</td></tr></table>
+		<table>
+	<tr>
+
+		<td>Current Email:</td>
+		<td>{user1}</td>
+	</tr>
+	<tr>
+		<td>New Email:</td>
+			<td><input type="text" name="user2" value="{user2}"/></td>
+		</tr>
+		
+	<tr>
+		<td>New password:</td>
+		<td><input type="text" name="pass1" value="{pass1}"/></td>
+	</tr>
+	<tr>
+		<td>Confirm new password:</td>
+		<td><input type="text" name="pass2" value="{pass2}" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="hidden" name="user1" value="{user1}">
+		<input type="hidden" name="pass0" value="{pass0}"><input type="submit" value="Change" />&nbsp;&nbsp;<input type="reset" /></td>
+	</tr>
+</table>
+</form>
+
+</div>

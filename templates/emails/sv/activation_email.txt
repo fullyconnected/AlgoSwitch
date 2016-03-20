@@ -1,0 +1,15 @@
+Tjana {name},
+
+Du är ett steg bort från att slutföra din registrering.
+Klicka på länken nedan för att aktivera ditt konto:
+{baseurl}/activate.php?user_id={user_id}&act_code={act_code}
+
+Ditt användarnamn och lösenord:
+
+Användarnamn: {username}
+lösenord: {password}
+
+
+Din aktiveringskod: {act_code}
+
+Om länken ovan inte är aktiv, helt enkelt kopiera och klistra in i din webbläsare adress fönstret

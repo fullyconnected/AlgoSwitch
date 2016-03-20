@@ -1,0 +1,21 @@
+<form method="post" action="member_del.php">
+<table cellspacing="0" cellpadding="5" width="50%" border="0">
+<tr align="center">
+	<td colspan="2">
+	To expel a member select the screen name from the list below and press
+	'delete selected'.
+	This will prevent the member from accessing the site. Caution: the deletion cannot be undone.
+	</td>
+</tr>
+<tr align="center">
+	<td>
+		<select name="user_id" size="1">
+		{names_options}
+		</select>
+	</td>
+</tr>
+<tr align="center">
+	<td colspan="2"><input type="submit" value="Delete selected" /></td>
+</tr>
+</table>
+</form>

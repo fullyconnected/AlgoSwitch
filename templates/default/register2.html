@@ -1,0 +1,35 @@
+<div>{message}</div>
+<h4>{lang.REGISTRATION_ACTIVATION_NEW}</h4>
+<hr>
+
+
+
+<script type="text/javascript">
+	function checkform() {
+		var the=document.myform;
+		if (the.act_code.value=="") {
+			alert('You must enter the activation code sent to you by email.');
+			the.act_code.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+<form method="post" name="myform" action="{relative_path}processors/registration.php" onsubmit="return(checkform())">
+<input type="hidden" name="step" value="2" />
+<input type="hidden" name="user_id" value="{user_id}" />
+</font><br>
+
+
+<b>{lang.REGISTRATION_ACCOUNT_ACTIVATE}</b>
+
+	{lang.REGISTRATION2_HELLO} {name}, {lang.REGISTRATION2_MESS1} {email}
+		<br />{lang.REGISTRATION2_MESS2}
+
+(<a href="{relative_path}processors/resend_actcode.php?user_id={user_id}">{lang.REGISTRATION2_MESS3}</a>)
+<br />
+
+<input type="text" placeholder="{lang.REGISTRATION2_ACTIVATION_CODE}" class="input-medium" name="act_code" />
+
+
+<input class="btn btn-primary" type="submit" value="{lang.REGISTRATION2_ACTIVATION_MEMBERSHIP}" />

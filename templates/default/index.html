@@ -1,0 +1,45 @@
+  <div class="row">
+                <div class="span4">
+                    <h3> {lang.INDEX_FEATURED_MEMBERS}</h3>
+         
+	 <++include function="featureme_bit"++> 
+	 
+                </div>
+
+
+<div class="span4">
+ <h3>{lang.INDEX_NEW_MEMBERS}</h3>
+                  
+
+<script src="{tplurl}/js/ajax_req.js" type="text/javascript"></script>
+<script>
+htmlData('processors/new_members_ajax.php', 'p=1');
+</script>
+
+<div id='loading' style='display:none'><img src='{tplurl}/images/loader.gif'></div>
+<div class="" id="txtResult"></div>
+	
+		  
+		  
+		  
+               </div>
+                <div class="span4">
+                    <h3>{lang.INDEX_SITE_STATS}</h3>
+                    <p>
+		      
+		      
+       <++include function="stats_bit"++>
+		      
+		    </p>
+                   
+                </div>
+            </div>
+
+
+
+
+        
+        
+   
+   
+  

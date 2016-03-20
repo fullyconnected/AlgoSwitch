@@ -1,0 +1,15 @@
+Hola {name},
+
+Estás a un paso de completar su registro.
+Haga clic en el enlace de abajo para activar tu cuenta:
+{baseurl}/activate.php?user_id={user_id}&act_code={act_code}
+
+Su nombre de usuario y contraseña:
+
+Nombre de usuario: {username}
+Ccontraseña: {password}
+
+
+Su código de activación: {act_code}
+
+Si el enlace de arriba no está activo, simplemente copia y pega a la ventana de direcciones de su navegador

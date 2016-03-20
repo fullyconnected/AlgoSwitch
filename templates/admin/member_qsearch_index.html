@@ -1,0 +1,138 @@
+<h1>Member Search:</h1>
+<div id="mainwide">
+<table width="70%">
+<tr>
+	<td colspan="4" height="20" align="right" valign="top">
+      <form action="member_search_process.php" method="post">
+		<input type="hidden" name="searchtype" value="4" />
+		<input type="hidden" name="user_id" size="6" />
+	<input type="submit" value="Browse Members" />
+	
+		</form>
+    
+    
+    </td>
+</tr>
+<tr class="trpar">
+	<td width="25%" align="center">
+		<form action="member_search_process.php" method="post">
+		<input type="hidden" name="searchtype" value="1" />
+		<table>
+		<tr>
+			<td><strong>By Username *:</strong></td>
+		</tr>
+		<tr>
+			<td><input type="text" name="user" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Go" /></td>
+		</tr>
+		</table>
+		</form>
+	</td>
+	<td width="25%" align="center">
+		<form action="member_search_process.php" method="post">
+		<input type="hidden" name="searchtype" value="2" />
+		<table>
+		<tr>
+			<td><strong>Name *:</strong></td>
+		</tr>
+		<tr>
+			<td><input type="text" name="name" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Go" /></td>
+		</tr>
+		</table>
+		</form>
+	</td></tr><tr>
+	<td width="25%" align="center">
+		<form action="member_search_process.php" method="post">
+		<input type="hidden" name="searchtype" value="4" />
+		<table>
+		<tr>
+			<td><strong>By User ID:</strong></td>
+		</tr>
+		<tr>
+			<td><input type="text" name="user_id" size="6" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Go" /></td>
+		</tr>
+		</table>
+		</form>
+	</td>
+	<td width="25%" align="center">
+		<form action="member_search_process.php" method="post">
+		<input type="hidden" name="searchtype" value="6" />
+		<table>
+		<tr>
+			<td><strong>By Email Address:</strong></td>
+		</tr>
+		<tr>
+			<td><input type="text" name="email" size="20" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Go" /></td>
+		</tr>
+		</table>
+		</form>
+	</td>
+</tr>
+<tr class="trimpar">
+	<td colspan="4" align="center">
+		<form method="post" name="myform" action="member_search_process.php">
+		<input type="hidden" name="searchtype" value="5" />
+		<table cellspacing="5" cellpadding="0" border="0">
+		<tr>
+			<td><strong>Search for:</strong></td>
+			<td>
+				<select size="1" name="gender">
+				{gender_options}
+				</select>
+		
+			
+            <td>
+				<strong>having access level</strong>
+				<select size="1" name="acc_level">
+				<option value="-1">Any</option>
+				<option value="{registerlevel}">Free member</option>
+				<option value="{subscriberlevel}">Paying member</option>
+				</select>
+			</td>
+            
+            
+            
+            
+            
+            
+            
+            </td>
+			
+		</tr>
+		<tr>
+			<td colspan="3" align="center"><input type="submit" value="Go" />&nbsp;&nbsp;<input type="reset" /></td>
+		</tr>
+		</table>
+		</form>
+	</td>
+</tr>
+<tr class="trpar">
+	<td colspan="4">
+		<form method="post" name="myform" action="member_search_process.php">
+		<input type="hidden" name="searchtype" value="7" />
+		<strong>List all not activated members:</strong>
+		<input type="submit" value="Go >" />
+		</form>
+
+	</td>
+</tr>
+<tr>
+	<td colspan="4">
+	* Use % for wildcards. Example: '<b>ant</b>' would return only members who has 'ant' as there name<br />
+	A search for '<b>ant%</b>' would return all members whose name starts with ant: <u>ant</u>hony, <u>ant</u>i, <u>ant</u>hanasios<br />
+	A search for '<b>%ant%</b>' would return all members who have ant in their name: <u>ant</u>hony, ant<u>inet</u>, gr<u>ant</u>
+	</td>
+</tr>
+</table>
+</div>

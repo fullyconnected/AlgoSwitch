@@ -1,0 +1,12 @@
+RewriteEngine On
+Options -MultiViews +FollowSymLinks
+Rewritebase /
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ profile_view.php?profilelink=$1 [QSA,L]  
+# Don't rewrite admin/ directory
+RewriteCond %{REQUEST_URI} !^/admin.* [NC]
+
+
+
+
+

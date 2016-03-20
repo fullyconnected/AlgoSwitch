@@ -1,0 +1,251 @@
+<div>{message}</div>
+
+ <div class="row-fluid">
+	<h1>Sign Up!</h1>
+		<form method="POST" name="myform" id="myform" action="{relative_path}processors/registration.php">
+			
+			<input type="hidden" name="step" value="1" />
+                <div class="span4">
+                 <div class="field">
+					<label for="firstname">Profile Link:</label>
+					<input type="text" id="firstname" name="plink" value="{plink}" placeholder="Profile link" class="login" />
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="firstname">{lang.NAME}:</label>
+					<input type="text" id="firstname" name="name" value="{name}" placeholder="Name" class="login" />
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="email">Email Address:</label>
+					<input type="text" id="email" name="email" value="{email}" placeholder="Email" class="login"/>
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" value="{password}" placeholder="Password" class="login"/>
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="confirm_password">Confirm Password:</label>
+					<input type="password" id="confirm_password" name="password2" value="{password2}" placeholder="Confirm Password" class="login"/>
+				</div> <!-- /field -->
+				
+				<div class="field">
+				<label for="gender">Gender:</label>
+				
+				<select name="gender">{gender_options}</select>
+				
+				</div>
+                </div>
+                <div class="span4">
+                  	<div class="field">
+				
+				<label for="gender">Birthday:</label>
+				<select name="birthmonth">
+				{birthmonth_options}
+				</select><br />
+		
+				<select name="birthday" ><br />
+				{birthday_options}
+				</select><br />
+				<select name="birthyear">
+				{birthyear_options}
+				</select>	
+					
+				</div>
+				
+				 <div class="field">
+        <label class="control-label">{lang.ACCOUNT_INFO_COUNTRIES} </label>
+        <div class="controls">
+        <select name="country" id="id_country" onchange="xrefresh_state();">
+	<option value="">{lang.ACCOUNT_INFO_CHOOSE_COUNTRY}</option>
+	{countriesx}
+	</select>
+       
+     </div></div>
+				
+		
+       <div class="field">
+        <label class="control-label">{lang.ACCOUNT_INFO_CHOOSE_REGION} </label>
+        <div class="controls">
+             <select name="state" id="id_state" onchange="xrefresh_city();">
+		<option value="">{lang.ACCOUNT_INFO_CHOOSE_STATE_REGION}</option>
+		{statesx}
+	</select>
+       
+     </div>
+       </div>
+       
+       
+       <div class="field">
+        <label class="control-label">{lang.ACCOUNT_INFO_CHOOSE_CITIES} </label>
+        <div class="controls">
+             <select name="city" id="id_city">
+		<option value="">{lang.ACCOUNT_INFO_CHOOSE_CITY}</option>
+		{citiesx}
+	</select>
+       
+     </div>
+	
+	<div class="field">
+				<label for="profession">{lang.PROFILE_TYPE}:</label>
+				
+				<select name="profession">{profession_options}</select>
+				
+				</div>
+	
+       </div>
+      		
+				
+               </div>
+                <div class="span4">
+                <div class="field">
+			
+		<div class="controls">
+			<span>{scode}</span><br>
+			
+			</div>
+			</div> <!-- /login-fields -->
+			
+			<div class="login-actions">
+			<span class="login-checkbox">
+			<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="checkme" tabindex="4" />
+					
+		<label class="choice" for="Field"><a data-toggle="modal" href="#example" class="">I have read and agree with the Terms of Use.</a></label>
+		</span>
+									
+				<button class="button btn btn-primary btn-large">Register</button>
+				
+			</div> <!-- .actions -->
+			
+		</form>
+	
+	
+
+
+
+<div id="example" class="modal hide" style="display: none; ">
+            <div class="modal-header">
+              <a class="close" data-dismiss="modal">X</a>
+              <h3>The Terms and Conditions</h3>
+            </div>
+            <div class="modal-body">
+            
+              <p>The Terms and Conditions are an important part of a website's business.  The Terms and Conditions explain how the website should be used as well as the responsibilities of the company and the user. This document also lays out the prohibited uses of the website.  The Terms and Conditions will be completed with our simple interview, but it may also be edited online or in Word format to include special circumstances, policies, or provisions unique to your business arrangement. </p>		        
+            </div>
+            <div class="modal-footer">
+        
+              <a href="#" class="btn" data-dismiss="modal">Close</a>
+            </div>
+          </div>
+	
+		
+		
+<div class="login-extra">
+	Already have an account? <a href="./login.php">Login</a>
+</div> <!-- /login-extra -->
+		
+                </div>
+         </div>
+ 
+ 
+ 
+ <script type="text/javascript">
+function xrefresh_state()
+
+{
+	$("#id_state").attr("disabled", true);$("#id_state").html('');
+
+    var qs = $("#id_country").val();
+
+    if(qs == '') {
+
+      //  alert('You must specify a country !');
+
+    }
+
+    else {
+
+        $("#id_state").append(new Option('Please Wait ...'));
+
+        var state_options= new Array();
+
+        $.get("processors/registration-ajax.php?action=refresh_state&country_id=" + qs, function(data){
+
+            eval(data); 
+
+		        if(state_options.length > 0) {
+
+                    addOptions(state_options,document.getElementById('id_state'));
+
+  
+
+		}  }  ); } 
+
+} 
+
+function xrefresh_city()
+
+{
+
+    $("#id_city").attr("disabled", false);
+    
+    $("#id_city").html('');
+
+    var qs = $("#id_state").val();
+
+    if(qs == '') {
+
+        //alert('You must specify a state !');
+
+    }
+
+    else {
+        $("#id_city").append(new Option('Please Wait ...'));
+        var city_options= new Array();
+        $.get("processors/registration-ajax.php?action=refresh_city&state_id=" + qs, function(data){
+            eval(data); 
+                if(city_options.length > 0) {
+                    addOptions(city_options,document.getElementById('id_city'));
+        }  }  ); } 
+}         
+
+function addOptions(cl,select_id) {
+
+        if(select_id)
+
+        {  
+            $(select_id).removeAttr("disabled");$(select_id).html('');
+            for(var i = 0; i < cl.length; i++) {
+            select_id.options[i] = new Option(cl[i].text, cl[i].value);
+
+            }
+
+        }
+
+} 
+function update() {
+  $("#notice_div").html('Loading..'); 
+  $.ajax({
+    type: 'GET',
+    url: 'processors/registration-ajax.php?action=refresh_city&state_id=',
+    timeout: 2000,
+    success: function(data) {
+      $("#some_div").html(data);
+      $("#notice_div").html(''); 
+      window.setTimeout(update, 10000);
+    },
+
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+      $("#notice_div").html('Timeout contacting server..');
+
+      window.setTimeout(update, 60000);
+
+    }
+});
+
+}
+
+</script>

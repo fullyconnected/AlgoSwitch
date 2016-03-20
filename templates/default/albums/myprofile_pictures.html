@@ -1,0 +1,44 @@
+
+{message}
+ 
+ <h4>{lang.ALBUMS_ALBUM}: {albumname}</h4>  
+	  <hr>   
+
+       <a class="btn btn-mini" href="{relative_path}myprofile_album.php">{lang.ALBUMS_MY_ALBUMS}</a>  
+
+
+
+<div class="container gallery">
+
+
+   <ul class="thumbnails">
+
+	{picstable}
+  </ul>
+  
+  </div>
+  <br />
+  <div class="">
+<form method="post" name="myform" action="{relative_path}processors/myprofile_album.php" enctype="multipart/form-data">
+
+
+
+
+
+
+<input type="file" name="new_pic" />
+
+
+<input type="hidden" name="id" value="{id}" />
+
+
+<input class="btn" type="submit" value="{lang.UPLOAD}" />
+
+
+
+
+
+
+
+</form>
+</div>

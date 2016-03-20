@@ -1,0 +1,10 @@
+Hello {to},
+{from} has just sent you a message to your {sitename} account.
+{appendmess}
+To access your account please log in at {baseurl} and go to the Mailbox section.
+Regards,
+{sitename}
+
+For any problem regarding our site please contact {contactusmail}
+
+

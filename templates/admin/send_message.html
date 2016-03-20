@@ -1,0 +1,76 @@
+<h1>Send internal message:</h1>
+<div id="main">
+<form name="myform" id="myform" action="message_process.php" method="post">
+
+<table>
+
+
+
+	<tr>
+
+		<td><strong>From: </strong></td>
+
+		<td><input type="text" name="from" value="{from}" /></td>
+
+	</tr>
+
+	<tr>
+
+		<td><input type="radio" name="act" value="-4" {checked} /></td>
+
+		<td><strong>to a member (name):</strong> <input type="text" name="name" value="{name}" onfocus="document.myform.elements[1].checked='true'" /></td>
+
+	</tr>
+
+	<tr>
+
+		<td><input type="radio" name="act" value="-3" /></td>
+
+		<td><strong>to all members</strong></td>
+
+	</tr>
+
+	
+	
+<loop name="genders">
+
+	<tr>
+
+		<td><input type="radio" name="act" value="{genders.gender_id}" /></td>
+
+		<td><strong>to all {genders.gender_name} members</strong></td>
+
+	</tr>
+
+</loop name="genders">
+
+	<tr>
+
+		<td><strong>Subject:</strong></td>
+
+		<td><input type="text" name="subject" value="{subject}" /></td>
+
+	</tr>
+
+	<tr>
+
+		<td><strong>Message:</strong></td>
+
+		<td><textarea name="body" wrap="off" cols="50" rows="15" />{body}</textarea></td>
+
+	</tr>
+
+	<tr>
+
+		<td></td>
+
+		<td align="center"><input type="submit" value="Send" />&nbsp;&nbsp;<input type="reset" /></td>
+
+	</tr>
+
+</table>
+
+</form>
+
+</div>
+

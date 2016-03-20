@@ -1,0 +1,31 @@
+<h1>Access levels:</h1>
+<div id="main">
+<table cellspacing="1" cellpadding="2" border="0">
+<form method="post" action="acclevels.php">
+<tr align="center">
+	<td colspan="4">Current access levels for each page/feature:</td>
+</tr>
+<tr align="center">
+	<td colspan="4"><input type="submit" value="Change" /></td>
+</tr>
+<tr class="adminheader" align="center">
+	<td><font class=adminheaderfont>Page/feature description</font></td>
+	<td><font class=adminheaderfont>Guest level</font></td>
+	<td><font class=adminheaderfont>Registered</font></td>
+	<td><font class=adminheaderfont>Paid Members</font></td>
+</tr>
+<loop name="levels">
+<tr class="{levels.myclass}">
+	<td>{levels.diz}</td>
+	<td align="center"><input type="radio" name="{levels.key}" value="0" {levels.checkguest} /></td>
+	<td align="center"><input type="radio" name="{levels.key}" value="1" {levels.checkregistered} /></td>
+	<td align="center"><input type="radio" name="{levels.key}" value="2" {levels.checksubscriber} /></td>
+</tr>
+</loop name="levels">
+<tr align="center">
+	<td colspan="4"><input type="submit" value="Change" /></td>
+</tr></form>
+</table>
+
+
+</div>

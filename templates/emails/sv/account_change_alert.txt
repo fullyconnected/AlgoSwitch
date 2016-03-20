@@ -1,0 +1,8 @@
+Hello {name},
+
+The site administrator at {sitename} has changed your status or membership to {newstatus}.
+
+Regards,
+{sitename}
+
+For any problem regarding our site please contact {contactusmail}

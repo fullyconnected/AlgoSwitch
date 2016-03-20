@@ -1,0 +1,49 @@
+<div class="vitbg"><br /><font class="alert">{message}</font></div>
+  
+        <table width="800" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+	  <tr>
+	    <td width="27%" align="left"><b>{lang.LIST_ADD_TO_LIST}</b></td>
+	     
+        <td width="25%" align="right"><a href="{relative_path}mylist.php"><strong>{lang.LIST_MY_LIST}</strong> &nbsp;</td>
+	  <tr>
+	    <td colspan="3" align="center"><div class="head_zoid"></div><br />
+
+<table width="100%" cellpadding="10" cellspacing="2" border="0">
+  <tr valign="top">
+    <td>{backlink2}<img src="memberpictures/medthumbs/{img}">{backlinkend}</td>
+    <td align="center"> {backlink}
+
+<table bgcolor="#cccccc" cellpadding="5" cellspacing="1" border="0">
+<tbody>
+
+	{MYLIST}
+
+</table>
+
+</td>
+</tr>
+
+<table width="100%" cellpadding="2" cellspacing="2" border="0" bgcolor="#FFFFFF">
+<tr>
+<td align="center">
+
+<div align="center">
+<form method="post" name="myform" action="{relative_path}processors/manage_list.php" enctype="multipart/form-data">
+{lang.LIST_TITLE}: <input type="text" name="list_title" value="{list_title}" size="25" maxlength="25">
+
+<input type="submit" value="{lang.SAVE}"></form>
+</div>
+
+
+<p style="visibility:hidden" id="inprogress">
+   <object id="inprogress_img"  classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="32" height="32" id="loading" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/loading.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="images/loading.swf" quality="high" bgcolor="#ffffff" width="32" height="32" name="loading" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>  
+</p>
+
+</td>
+</tr></table>
+
+</td></tr></table>

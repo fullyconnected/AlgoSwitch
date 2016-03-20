@@ -1,0 +1,61 @@
+<div class="h altaltview alink ppp">
+                    <i class="tl"></i><i class="tr"></i>
+                    <i class="bl"></i><i class="br"></i>
+                    <div class="core">
+
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0" valign="top">
+<tr><td class=headertext>Your Inbox</td></tr><tr>
+<td class=textspace>
+<form action="{relative_path}processors/mail_process.php" method="get">
+<input type="hidden" name="action" value="4">
+<table cellspacing="1" cellpadding="0" width="100%" border="0" valign="top">
+<tr>
+	<td valign="top">{messages_in_inbox}</td>
+</tr>
+<tr>
+	<td align="center" valign=top><font class="alert">{message}</font></td>
+</tr>
+<tr>
+	<td valign="top"><input class="aptbutton" type="submit" value="Delete Selected"></td>
+</tr>
+<tr>
+	<td align="center" valign="top">{prevlink} {nextlink}</td>
+</tr>
+<tr>
+	<td valign="top">
+		<table valign=top>
+		<tr>
+			<td class="colsheader" width="1%">&nbsp;</td>
+			<td class="colsheader" width="30%" align="center" valign=top>Sender</td>
+			<td class="colsheader" width="40%" align="center" valign=top>Subject</td>
+			<td class="colsheader" width="20%" align="center" valign=top>Date</td>
+		</tr>
+<loop name="mail_interface">
+		<tr>
+			<td class="whiterows" align="center">{mail_interface.del_checkbox}</td>
+			<td class="whiterows">{mail_interface.sender}</td>
+			<td class="whiterows" align="center">{mail_interface.subject}</td>
+			<td class="whiterows" align="center">{mail_interface.date_sent}</td>
+		</tr>
+</loop name="mail_interface">
+		</table>
+	</td>
+</tr>
+<tr>
+	<td height="20"></td>
+</tr>
+<tr>
+	<td align="center">{prevlink} {nextlink}</td>
+</tr>
+</table>
+</form>
+
+</td></tr></table>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+
+</div></div>

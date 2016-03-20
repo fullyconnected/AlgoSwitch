@@ -1,0 +1,84 @@
+<script type="text/javascript">
+	function checkform() {
+		var the=document.myform;
+		if (the.birthmonth.value=="-2") {
+			alert('Please enter the birth month');
+			return false;
+		}
+		if (the.birthday.value=="-2") {
+			alert('Please enter the birth day');
+			return false;
+		}
+		if (the.birthyear.value=="-2") {
+			alert('Please enter the birth year');
+			return false;
+		}
+		return true;
+	}
+</script>
+<form method="post" name="myform" action="edit_profile_basic_process.php" onsubmit="return(checkform())">
+<input type="hidden" name="user_id" value="{user_id}" />
+<table cellspacing="5" cellpadding="0" width="100%" border="0">
+<tr>
+	<td colspan="2" class="headertext">Edit member's profile</td>
+</tr>
+<tr>
+	<td colspan="2" height="10"></td>
+</tr>
+<tr>
+	<td colspan="2" height="20" align="center"><font class="alert">{message}</font></td>
+</tr>
+</table>
+<table width="60%">
+<tr>
+	<td>Screen Name:</td>
+	<td><input type="text" name="name" value="{name}" /></td>
+</tr>
+<tr>
+	<td>Gender:</td>
+	<td>
+		<select name="gender" size="1">
+		{gender_options}
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>Country:</td>
+	<td>
+		<select name="country" size="1">
+		{country_options}
+		</select>
+	</td>
+</tr>
+{field_state}
+{field_city}
+{field_zip}
+{field_ADDr}
+<tr>
+	<td>Birthdate:</td>
+	<td>
+		<select name="birthmonth" size="1">
+		{birthmonth_options}
+		</select>
+		<select name="birthday" size="1">
+		{birthday_options}
+		</select>
+		<select name="birthyear" size="1">
+		{birthyear_options}
+		</select>
+
+	</td>
+</tr>
+<tr>
+	<td colspan="2" height="10"></td>
+</tr>
+{field_mydiz}
+{field_yourdiz}
+<tr>
+	<td colspan="2" height="10"></td>
+</tr>
+<tr>
+	<td colspan="2" align="center" colspan="2"><input type="submit" value="Update" /></td>
+</tr>
+</table>
+</form>

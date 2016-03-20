@@ -1,0 +1,43 @@
+
+
+<script type="text/javascript" src="{tplurl}/js/instantedit.js"></script>
+
+{message}
+
+<form method="post" name="myform" action="{relative_path}processors/create_album.php" enctype="multipart/form-data">
+<legend>{lang.ALBUMS_TITLE}</legend>
+
+
+<a class="btn btn-mini" href="{relative_path}pics.php?user_id={user_id}">{lang.ALBUMS_MY_PICTURES}</a>
+
+	
+
+
+  
+
+
+
+  <div class="container gallery">
+            <p>	<small>
+	{lang.ALBUMS_LIMIT_MESS_1} <strong>{max_pics}</strong> {lang.ALBUMS_LIMIT_MESS_2}<br />{lang.ALBUMS_LIMIT_MESS_3} {album_count} {lang.ALBUMS_LIMIT_MESS_4} {pic_count} {lang.ALBUMS_LIMIT_MESS_5} 
+  </small></p>
+  
+  <ul class="thumbnails">
+	
+  {picstable}
+  
+  </ul>
+  </div>
+
+
+<div>
+  
+
+<input type="text" class="input-large" placeholder="{lang.ALBUMS_MY_TITLE}" name="album_title" value="{album_title}">
+
+<input class="btn btn-large btn-primary" type="submit" value="Save">
+</div>
+</form>
+
+
+

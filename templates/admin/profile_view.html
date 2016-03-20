@@ -1,0 +1,106 @@
+<table cellspacing="5" cellpadding="0" width="100%" border="0">
+<tr class="adminheader">
+	<td colspan="2" class="headertext" align="center">View {titlename} profile</td>
+</tr>
+<tr>
+	<td colspan="2" height="10"></td>
+</tr>
+<tr>
+	<td valign="top" width="30%">
+		<table width="100%">
+		<tr class="trimpar">
+			<td>
+			<a href="javascript:history.go(-1)">Back</a><br />
+			<a href="do.php?act=delete&user_id={user_id}">Delete this member</a><br />
+			<a href="send_email.php?name={name}">Send email</a><br />
+			<a href="send_message.php?name={name}">Send onsite message</a><br />
+			<a href="do.php?act=delsentmsg&user_id={user_id}">Delete all messages sent by {name}</a>
+			</td>
+		</tr>
+		<tr class="trpar">
+			<td nowrap>
+				<form action="change_membership.php" method="post">
+				Status / Membership:<br />
+				<input type="hidden" name="step" value="2">
+				<input type="hidden" name="user_id" value="{user_id}">
+				<input type="radio" name="status" value="1" {active} />Active&nbsp;
+				<input type="radio" name="status" value="2" {notactive} />Not active
+				<input type="radio" name="status" value="3" {suspended} />Suspended
+				<br />
+				<input type="radio" name="membership" value="1" {registered} />Regular&nbsp;
+				<input type="radio" name="membership" value="2" {subscriber} />Paid&nbsp;
+				<input type="radio" name="membership" value="3" {admin} />Admin
+				<br />
+				<input type="submit" value="Change" />
+				</form>
+			</td>
+		</tr>
+		<tr class="trimpar">
+			<td>
+			{approval_links}
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td valign="top">
+		<table cellspacing="5" cellpadding="0" width="60%" border="1">
+		<tr class="adminheader">
+			<td class="headertext" colspan="3">About {name}</td>
+		</tr>
+		<tr>
+			<td rowspan="11" align="center" valign="top">
+				<img src="{photo}" width="130" border="0" /><br />
+				{delphoto}
+			</td>
+			<td>Name:</td>
+			<td>{name}</td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td>{gender}</td>
+		</tr>
+		<tr>
+			<td>Registered as a:</td>
+			<td>{profession}</td>
+		</tr>
+		<tr>
+
+			<td>Age:</td>
+			<td>{age}</td>
+		</tr>
+		<tr>
+
+			<td>Ethnicity:</td>
+			<td>{ethnic}</td>
+		</tr>
+		<tr>
+			<td>Country:</td>
+			<td>{country}</td>
+		</tr>
+		{field_state}
+		{field_city}
+		{field_zip}
+		{field_addr}
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+
+			<td align="center">
+				<table>
+				<tr>
+<loop name="photos">
+					<td align="center">
+					<img src="{photos.picture_name}" width="100" border="1" />
+					<a href="do.php?act=delpic&pic={photos.picture_number}&user_id={user_id}">Delete</a>
+					</td>
+</loop name="photos">
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+
+	</td>
+</tr>
+</table>

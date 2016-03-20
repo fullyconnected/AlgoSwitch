@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /js/
+Disallow: /processors/
+Disallow: /tools/
+Disallow: /admin/
+Disallow: /images/
+Disallow: /includes/
+Disallow: /templates/
+Disallow: /templates/default/
+Disallow: /templates/admin/
+Disallow: /cache/
+
+

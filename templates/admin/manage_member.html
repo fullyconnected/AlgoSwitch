@@ -1,0 +1,64 @@
+<div id="mainwide">
+<table cellspacing="5" cellpadding="0" width="800" border="0">
+<tr>
+	<td colspan="2" class="headertext" align="center">Member Management: {titlename}</td>
+</tr>
+<tr>
+	<td colspan="2" height="10"></td>
+</tr>
+<tr>
+	<td valign="top">
+		<table>
+		<tr bgcolor="#f1f1f1">
+			<td>
+			<a href="javascript:history.go(-1)">Back</a><br />
+			<a href="do.php?act=delete&user_id={user_id}">Delete this member</a><br />
+			<a href="send_email.php?name={name}">Send email</a><br />
+			<a href="send_message.php?name={name}">Send onsite message</a><br />
+			</td>
+		</tr>
+		<tr bgcolor="#f4f4f5">
+			<td nowrap>
+				<form action="change_membership.php" method="post">
+				Status / Membership:<br />
+				<input type="hidden" name="step" value="2">
+				<input type="hidden" name="user_id" value="{user_id}">
+				<input type="radio" name="status" value="1" {active} />Active&nbsp;<br />
+				<input type="radio" name="status" value="2" {notactive} />Not active<br />
+				<input type="radio" name="status" value="3" {suspended} />Suspended
+				<br />
+				<input type="radio" name="membership" value="1" {registered} />Regular&nbsp;<br />
+			
+				<input type="radio" name="membership" value="5" {admin} />Admin
+				<br />
+               
+               	<input type="radio" name="membership" value="2" {subscriber} /><font class="alert">Paid(make changes in paypal setup)</font>{planlevel}<br />
+                	<input type="radio" name="membership" value="4" {forum} />Forum Admin<br />
+	
+                
+				<input type="submit" value="Change" />
+				</form>
+			</td>
+		</tr>
+		<tr class="trimpar">
+			<td>
+			{approval_links}
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td align="center" valign="top">
+
+		<table cellspacing="5" cellpadding="0" width="60%" border="0">
+		<tr>
+			<td>{mptitle}</td>
+		</tr>
+		<tr>
+			<td align="center">
+			{picstableadmin}
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table></div>

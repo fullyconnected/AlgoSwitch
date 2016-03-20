@@ -1,0 +1,49 @@
+<h1>Clean Inboxes:</h1>
+<div id="main">
+
+<form name="myform" id="myform" action="clean_inboxes.php" method="post">
+<table>
+
+	
+
+	<tr>
+
+		<td><input type="radio" name="what" value="-1" {checked} /></td>
+
+		<td><strong>unused for more than</strong> <input type="text" name="inactive_days" size="3" onfocus="document.myform.elements[0].checked='true'" /> <strong>days</strong></td>
+
+	</tr>
+
+	<tr>
+
+		<td><input type="radio" name="what" value="-2" /></td>
+
+		<td><strong><strong>of all members</strong></strong></td>
+
+	</tr>
+
+<loop name="genders">
+
+	<tr>
+
+		<td><input type="radio" name="what" value="{genders.gender_id}" /></td>
+
+		<td><strong>of all {genders.gender_name} members</strong></td>
+
+	</tr>
+
+</loop name="genders">
+
+	<tr>
+
+		<td></td>
+
+		<td align="center"><input type="submit" value="Clean" />&nbsp;&nbsp;<input type="reset" /></td>
+
+	</tr>
+
+</table>
+
+</form>
+</div>
+

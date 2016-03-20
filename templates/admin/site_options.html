@@ -1,0 +1,72 @@
+<h1>Change site options:</h1>
+<form action="site_options.php" method="post">
+<table cellspacing="0" cellpadding="5" border="0">
+
+
+
+
+
+<tr class="trimpar">
+	<td align="right"><input type="text" name="max_messages" size="3" value="{max_messages}" /></td>
+	<td>Number of messages a member may send per day. Use 0 for unlimited. (default 0)</td>
+</tr>
+
+
+<tr class="trpar">
+	<td align="right"><input type="text" name="max_user_pics" size="3" value="{max_user_pics}" /></td>
+	<td>Maximum number of pictures a user is allowed to have in the photo album.</td>
+</tr>
+<tr class="trimpar">
+	<td align="right"><input type="text" name="max_headlines" size="3" value="{max_headlines}" /></td>
+	<td>Number of announcement headlines to show on index page</td>
+</tr>
+<tr class="trpar">
+	<td colspan="2"><input type="checkbox" name="signup_alerts" value="1" {signup_alerts} />Check this if you want to receive an email each time a new user signs up.</td>
+</tr>
+<tr class="trimpar">
+	<td colspan="2"><input type="text" name="mailfrom" size="20" value="{mailfrom}" /><br />
+	Email address the news/emails are sent from. Don't leave this empty or no emails will be sent.</td>
+</tr>
+<tr class="trpar">
+	<td colspan="2"><input type="text" name="mailcontactus" size="20" value="{mailcontactus}" /><br /> 
+	The email address suggestions/complaints/comments from site are sent to. It will not be disclosed to the members.</td>
+</tr>
+<tr class="trimpar">
+	<td colspan="2"><input type="checkbox" name="use_comments_portfolios" value="1" {use_comments_portfolios} />
+	Turn on or off the portfolio comments </td>
+</tr>
+<tr class="trpar">
+  <td colspan="2"><input type="checkbox" name="use_comments_photos" value="1" {use_comments_photos} />
+Turn on or off the photo comments</td>
+</tr>
+
+<tr class="trimpar">
+  <td colspan="2"><input type="checkbox" name="use_ratings" value="1" {use_ratings} />
+Allow user profile ratings</td>
+</tr>
+
+
+<tr class="trpar">
+	<td colspan="2">
+    <input type="checkbox" name="auto_approve" value="1" {auto_approve} />
+  Check this if you want new members to be always approved.<br />
+
+    </td>
+</tr>
+
+<tr class="trimpar">
+  <td colspan="2"><input type="checkbox" name="email_confirmation" value="1" {email_confirmation} />
+Check to not require email confirmation on signup.</td>
+</tr>
+
+
+<tr class="trpar">
+	<td align="right"></td>
+	<td>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><input type="submit" value="Change" /></td>
+</tr>
+</table>
+</form>

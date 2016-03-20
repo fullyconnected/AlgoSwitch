@@ -1,0 +1,27 @@
+<form action="unsuspend.php" method="post">
+<input type="hidden" name="step" value="1">
+<table>
+<tr>
+	<td colspan="5" height="30">Choose the member to unsuspend from the list bellow:</td>
+</tr>
+<tr class="adminheader" align="center">
+	<td>Unsuspend</td>
+	<td>Name</td>
+	<td>Username</td>
+	<td>Status</td>
+	<td>Membership</td>
+</tr>
+<loop name="searchresult">
+<tr>
+	<td bgcolor="#eeeeee" align="center"><input type="radio" name="user_id" value="{searchresult.user_id}"></td>
+	<td bgcolor="#eeeeee">{searchresult.name}</td>
+	<td bgcolor="#eeeeee">{searchresult.username}</td>
+	<td bgcolor="#eeeeee">{searchresult.status}</td>
+	<td bgcolor="#eeeeee">{searchresult.membership}</td>
+</tr>
+</loop name="searchresult">
+<tr>
+	<td colspan="5" align="center"><input type="submit" value="Unsuspend" /></td>
+</tr>
+</table>
+</form>

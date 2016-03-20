@@ -1,0 +1,27 @@
+<center>
+
+<form action="change_membership.php" method="post">
+<input type="hidden" name="step" value="1">
+<table width="70%">
+	<tr>
+		<td>
+		Enter the <b>Screen Name</b> or part of a user screen name.<br>
+		A list of matching users will be displayed for you to choose from.
+		</td>
+	<tr>
+		<td align="center">Screen Name: <input type="text" name="name" /></td>
+	</tr>
+	<tr>
+		<td align="center"><input type="submit" value="Search" /></td>
+	</tr>
+	<tr>
+		<td heigth="50">
+		* Use % for wildcards. For example a search for '<b>dan</b>' would return only the member who has 'dan' as
+		username or screen name.<br />
+		A search for '<b>dan%</b>' would return all members whose name starts with dan: <u>dan</u>iel, <u>dan</u>dare, <u>dan</u>a, etc<br />
+		A search for '<b>%dan%</b>' would return all members who have dan in their name: <u>dan</u>iel, cala<u>dan</u>, bal<u>dan</u>dsexy
+		</td>
+	</tr>
+</table>
+</form>
+</center>

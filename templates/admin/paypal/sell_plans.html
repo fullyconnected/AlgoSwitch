@@ -1,0 +1,79 @@
+<h1>Paypal Setup:</h1>
+<div id="mainwide">
+<table>
+
+<tr>
+
+	<td width="720" height="30" colspan="6">
+
+		<p>Make changes to the desired plan and click the change button:</p>
+		<p><center><br /><font class="alert">{message}</font></center>
+		  
+	        </p></td>
+
+</tr>
+
+</table>
+
+<table>
+
+<tr class=hcell align="center">
+
+	<td></td>
+
+	<td><font class=hcellfont>Plan Name</font></td>
+
+	<td><font class=hcellfont>Plan Description</font></td>
+
+	<td><font class=hcellfont>Amount</font></td>
+
+	<td align="center"><font class=hcellfont>Period</font></td>
+
+	<td align="center"><font class=hcellfont>Term</font></td>
+<td align="center"><font class=hcellfont>Photos</font></td>
+<td align="center"><font class=hcellfont>Messages</font></td>
+	<td></td>
+</tr>
+
+<loop name="plans">
+
+<form action="{relative_path}paypal.php" method="post">
+
+<input type="hidden" name="plan_id" value="{plans.plan_id}">
+
+<tr>
+
+	<td class=admcell><a href="{relative_path}paypal.php?act=delete&plan_id={plans.plan_id}">Delete</a></td>
+
+	<td class=admcell><input type="text" size="15" name="plan_name" value="{plans.plan_name}" /></td>
+
+	<td class=admcell><input type="text" size="20" name="plan_diz" value="{plans.plan_diz}" /></td>
+
+	<td class=admcell><input type="text" size="5" name="amount" value="{plans.amount}" /></td>
+
+	<td class=admcell align="center"><input type="text" size="3" name="rec_period" value="{plans.rec_period}" /></td>
+
+	<td class=admcell>
+
+		<select name="rec_increment" size="1">
+
+		{plans.rec_increment}
+
+		</select>	</td>
+	<td class=admcell><input type="text" size="3" name="maxphoto" value="{plans.maxphoto}" /></td>
+    	<td class=admcell><input type="text" size="5" name="maxmess" value="{plans.maxmess}" /></td>
+	<td class=admcell><input type="submit" value="Change"/></td>
+</tr>
+</form>
+</loop name="plans">
+
+<tr>
+  <td colspan="6" height="30" align="center"><a href="{relative_path}paypal.php?act=add">Add new plan</a></td>
+</tr>
+<tr>
+
+	<td colspan="6" height="30" align="center">*Photos Max number of photos allowed to upload<br />*Max number messages member can send per day</td>
+</tr>
+</table>
+
+</div>

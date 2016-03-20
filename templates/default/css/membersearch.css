@@ -1,0 +1,26 @@
+#browseWraper{margin:1px; padding:0}
+#browseWraper img, #browseWraper a img{border:0;}
+#browseWraper h1{font-weight:bold; color: #990001; font-size:18px; position:relative;}
+#browseWraper h1 a{color:#656565; text-decoration:none;}
+#browseWraper h2{font-weight:bold; color:#666; font-size:18px; margin: 12px 0 12px 0 !important; padding:0;}
+#browseWraper form{margin:0; padding:0;}
+
+#browseWraper hr{margin:12px 0; padding:0; border:0; border-bottom:1px dashed #ccc; width:100%}
+#browseContainer{margin:0; padding:10px 12px 12px; border:1px solid #ccc;}
+#browseContainer table {margin:0; padding:0;}
+
+#browseContainer table tr th{text-align:left;}
+#browseContainer table tr td i{font-size:11px;}
+#browseContainer table tr td span{display: block;margin:14px 0 8px 0; font-weight:bold;}
+
+.hideBlock{display:none;}
+
+.browseselectwidth {
+		width:138px;
+}
+.tAds{
+	text-align:center;
+}
+
+table.tblOuter{width:100%;}
+table.tblOuter tr th.column1{width:194px;}

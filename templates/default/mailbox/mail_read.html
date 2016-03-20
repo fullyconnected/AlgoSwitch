@@ -1,0 +1,85 @@
+
+
+{message}
+
+
+    
+  	<table class="table">
+
+  	  <tr>
+      <td> 
+      <a class="btn btn-mini" href="mailbox.php?mailbox=inbox">{lang.MAIL_INBOX}</a> 
+      <a class="btn btn-mini" href="mailbox.php?mailbox=outbox">{lang.MAIL_OUTBOX}</a> 
+      <a class="btn btn-mini" href="mailbox.php?mailbox=savedbox">{lang.MAIL_SAVED_BOX}</a>&nbsp;
+      <a class="btn btn-mini" href="mail_blocked.php">{lang.MAIL_BLOCKED}&nbsp;</a>
+      </td>
+      </tr>
+          <tr>    
+            <td>
+            {mailbox_read}
+            </td>
+          </tr>
+        </table>
+
+
+
+
+  <table>
+    
+    
+<table>
+<tr>
+<form name="myform" id="myform" action="{relative_path}processors/mail_process.php" method="get">
+<td>
+
+<input type="hidden" name="mail_id" value="{mail_id}" />
+<input type="hidden" name="action" />
+<input align="left" class="btn"  type="submit" value="Reply" onclick="set_action(2)" />
+<input align="left" class="btn"  type="submit" value="Forward" onclick="set_action(3)" />
+
+</form>
+	
+	</td>
+</tr>
+
+</table>
+
+
+<table  class="table-striped" width="100%" border="0">
+
+<tr>
+	<td align="left"><b>From: </b></td>
+    
+	<td align="left" class="whiterows">&nbsp;{from}  <a href="processors/mail_process.php?action=5&mailbox={mailbox}&user_id={from_id}">Block {from}</a></td>
+</tr>
+<tr>
+	<td align="left"><b>Subject: </b></td>
+	<td align="left">{subject}</td>
+</tr>
+<tr>
+	<td align="left" class="colsheader"><b>Date: </b></td>
+	<td align="left">{date_sent}</td>
+</tr>
+<tr>
+	<td colspan="2">
+<table width="100%" cellpadding="10" cellspacing="11" border="0">
+<tr>
+<td>{body}</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+	var ns4 = (document.layers)? true:false;
+	var ie4 = (document.all)? true:false;
+	function set_action(newval) {
+			document.myform.action.value=newval;
+	}
+</script>
+
+
+
+

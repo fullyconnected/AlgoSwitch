@@ -1,0 +1,47 @@
+<div class="vitbg" align="center"><br /><font class="alert">{message}</font>
+<table width="800" border="0" bgcolor="#FFFFFF">
+<tr>
+<td width="800" align="left"><img src="{relative_path}images/rarrow.gif" border="0" alt="{name}" /><strong> {name}</strong> has a total of <strong>{totalrows}</strong> comments.</td>
+
+
+<td width="12%" align="left"><a href="{relative_path}comment_photo.php?user_id={user_id}&photo={showpho}"><b>Add Comment</b></a></td>
+</tr>
+</table>
+
+<table width="800" bgcolor="#FFFFFF">
+<tr><td><div class="head_zoid"></div></td></tr></table>
+
+ <div class="vitbg" align="center">{pager1}</div>
+
+
+
+<table width="800" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td align="center"><a href="{relative_path}{name}"><img src="{relative_path}memberpictures/{photo}" height="{mpheight}" width="{mpwidth}" class="mainimage" border="0" /></a></td>
+  </tr>
+</table>
+<table align="center" cellspacing="2" width="800" bgcolor="#FFFFFF">
+<loop name="foundphotocomments">
+          <td align="center" width="128" valign="top"><strong>{foundphotocomments.postername}</strong><br />
+           {foundphotocomments.profes}</td>
+          <td> </td>
+  </tr>
+        <tr>
+<td align="left" width="128" valign="top"> <a href="{relative_path}{foundphotocomments.postername}"><img src="{imagesurl}/{foundphotocomments.picom}" class="mainimage"  border="0"></a><br /> {foundphotocomments.delete}</div></td>
+
+          <td align="left" valign="top">{foundphotocomments.postdate}<br />{foundphotocomments.comment}
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" background="{relative_path}images/dottedbg.gif"><img src="{relative_path}images/spacer.gif" width="1" height="1" /></td>
+        </tr>
+        <tr>
+          </loop name="foundphotocomments">
+          </table>
+    
+      <div class="vitbg" align="center">{pager2}</div>
+      
+    </td>
+  </tr>
+</table>
+</div>

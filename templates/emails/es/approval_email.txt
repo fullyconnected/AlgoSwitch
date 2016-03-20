@@ -1,0 +1,14 @@
+Hi {name},
+
+We have some great news for you!
+Your portfolio has been accepted at our site \"{sitename}\".
+
+You can login right now on our site by clicking on the link below:
+
+{baseurl}
+
+If the link above is not active, simply copy and paste to your browser address window
+For any problem regarding our site please contact {contactusmail}
+
+
+

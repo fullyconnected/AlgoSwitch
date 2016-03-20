@@ -1,0 +1,84 @@
+<h1>Picture Reviewer</h1>
+<div id="mainwide">
+<table width=100% cellpadding=10 cellspacing=0 border=0><tr><td valign=top>
+
+<form action="pic_inspector.php" method="post">
+
+<table>
+
+<tr>
+
+	<td><strong>Start at user_id:</strong></td>
+
+</tr>
+
+<tr>
+
+	<td><input type="text" name="start_id" value="{start_id}" /></td>
+
+</tr>
+
+<tr>
+
+	<td><input type="submit" value="Go" /></td>
+
+</tr>
+
+<tr>
+
+	<td align="center" colspan="7">{prevlink} {nextlink}</td>
+
+</tr>
+
+<tr class="adminheader" align="center">
+
+	<td class="headertext"><table><tr><td class=headertext><strong>Inspecting photos of member:</strong> <a href="../{plink}" target=_blank><strong>{name}</strong></a></td>
+
+<td class=headertext><strong> User ID:{start_id}</strong></td></tr></table>
+
+</td>
+
+</tr>
+
+<tr class="trimpar">
+
+
+
+	<td>
+
+		<table>
+
+		<tr>
+
+<loop name="photos">
+
+			<td bgcolor="#eeeeee" align="center">
+
+				<img src="{photos.picture_name}" border="1" width="100" /><br />
+
+				<strong>{photos.dellink}</strong>
+
+			</td>
+
+</loop name="photos">
+
+		</tr>
+
+		</table>
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td align="center" colspan="7">{prevlink} {nextlink}</td>
+
+</tr>
+
+</table>
+
+</form>
+
+</td></tr></table>
+</div>

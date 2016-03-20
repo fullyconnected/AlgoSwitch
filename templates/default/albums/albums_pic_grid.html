@@ -1,0 +1,43 @@
+
+
+
+
+
+
+    
+    
+  	<script type="text/javascript">
+
+  		(function(window, PhotoSwipe){
+		
+  			document.addEventListener('DOMContentLoaded', function(){
+			
+  				var
+  					options = {
+  						preventHide: true,
+  						getImageSource: function(obj){
+  							return obj.url;
+  						},
+  						getImageCaption: function(obj){
+  							return obj.caption;
+  						}
+  					},
+  					instance = PhotoSwipe.attach( 
+  						[
+              
+                {picstable}
+              
+  							
+  				
+  						], 
+  						options 
+  					);
+					
+  					instance.show(0);
+					
+  			}, false);
+			
+			
+  		}(window, window.Code.PhotoSwipe));
+		
+  	</script>

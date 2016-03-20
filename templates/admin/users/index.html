@@ -1,0 +1,33 @@
+
+<table id="dg" title="Members" style="width:800px;height:641px"
+			url="{baseurl}/admin/users/get_users.php"
+			toolbar="#toolbar" pagination="true" 
+			fitColumns="true" singleSelect="true">
+		<thead>
+			<tr>
+				<th field="user_id" >User ID</th>
+                                <th field="user" width="80">Name</th>
+                                <th field="gender2" width="20">Gender</th>
+			
+				<th field="email" width="50">Email</th>
+                                <th field="profilelink" width="50">Profile Link</th>
+                                <th field="profession2" width="50">Profile Type</th>
+                                <th field="joindate" width="50">Join Date</th> 
+                              
+			</tr>
+		</thead>
+	</table>
+        
+     <div id="toolbar">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newItem()">New</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyItem()">Destroy</a>
+	 <span>User ID#:</span>  
+        <input id="user_id" style="line-height:26px;border:1px solid #ccc">  
+        
+          <span>Email:</span>  
+        <input id="email" style="line-height:26px;border:1px solid #ccc">  
+       
+        <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>  
+        
+        
+        </div>

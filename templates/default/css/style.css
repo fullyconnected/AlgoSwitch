@@ -1,0 +1,1463 @@
+body {
+font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+font-size:80%;
+background-color:#E7E7E7;
+color:#000;
+line-height:1.3em;
+margin:0;
+padding:0;
+
+}
+body.loading, body.loading * {
+    cursor : progress !important;
+}
+.grey {
+	color:#ccc;
+}
+
+ul{
+	list-style:none;margin:0;padding:0;
+	
+}
+/* front page */
+#castingsbit{
+text-align: left; background:#fff;
+}
+#bg_wrap {
+width:800px;
+margin-left:auto;
+margin-right:auto; 
+padding:0; 
+background-color:#fff;
+
+}
+.vitbg{
+background-color:#FFFFFF;
+}
+.forumpad{
+padding-left:10px;
+padding-right:10px;
+}
+.header-top{
+	width:100%;
+	background:#000;
+	font-family:"Verdana";
+	font-size:11px;
+	line-height:13px;
+	color:#FFF;
+	height:16px;
+	padding-top:1px;
+}
+.header-top .welcome{
+	float:left;
+	margin-left:5px;
+	display:block;
+}
+.header-top .welcome a{
+    color:#fff;
+    text-decoration:none;
+}
+.header-top .option{
+	float:right;
+	margin-right:5px;
+}
+.header-top .option a{
+	margin-right:10px;
+
+	color:#FFF;
+	text-decoration:none;
+}
+
+.castingsearch {
+border:1px solid #CCCCCC;
+background-color:#EEEEEE;
+margin-top: 5px;
+padding: 5px;
+}
+.simptable {
+border-bottom:1px dashed #9CA0AD;
+margin-top: 15px;
+padding-bottom: 15px;
+}
+.albumpulldowns{ 
+font-size:2px;
+}
+.simptabletop {
+background:#ebeef2;
+border-bottom:1px dashed #9CA0AD; 
+margin-top: 15px;
+padding-bottom: 15px;
+}
+
+#wrapper{
+margin:0 auto;
+
+	width:800px;
+	text-align: left;
+}
+
+select {
+	font-weight: normal;
+	font-size: 12.73px;
+	color: #000000;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	background-color:#ffffff;
+}
+
+/* General links style used where link does not have its own explicit class */
+a {
+	color: #499ede;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: normal;
+	font-size: 12.73px;
+
+	text-decoration: none;
+}
+.recent_visitors {
+font-size:10px; text-decoration:none;
+}
+
+
+/* Cell style for display of site title */
+.headercell {
+	background-color:#ffffff;
+	height:20px;
+
+}
+
+/* Class for title text */
+.title {
+	color: #336699;
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 20px; 
+	}
+/* profile blog list title */
+.btitle {
+	color: #336699;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 14px; 
+}
+
+
+.decobar {
+background-color: #444444;
+height:10px;
+}
+#pic_wrapper {
+margin-bottom:6px;
+}
+
+.unreadmail {
+/* Style for font displaying subject link for mail that has not been read  */
+
+	color: #ffff00;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 12.73px;
+
+}
+
+.readmail {
+/* Style for font displaying subject link for mail that has been read  */
+
+	color: #cccccc;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: normal;
+	font-size: 12.73px;
+}
+
+
+.colsheader {
+/* Used in inbox display and on the page where mail is read. Styles the colum headers as in: Sender, Subject, Date / From, Subject Date  */
+
+	color: #777777;
+	background-color: #E6E6DC;
+	border:1px outset #444444;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 12.73px;
+}
+
+.whiterows {
+/* Used in inbox display and on the page where mail is read. Styles the rows displaying the inbox content under sender, subject date when showing inbox list and the cell next to from, subject date when reading mail */
+
+	color: #000;
+	background-color: #E6E6DC;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-size: 12.73px;
+}
+
+
+
+
+/* Standard sized bold links */
+.boldlink {
+	font-weight: bold;
+	font-size: 12.73px;
+	color: #ff0000;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	text-decoration: none;
+}
+
+/* Standard submit button class */
+.aptbutton {
+	font-size: 12.73px;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	color: #000000;
+	height:20px;
+	font-weight:normal;
+	background-color: #cccccc;
+	border:1px solid #444444;
+	}
+
+.headertext {
+	color: #ffffff;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 12.73px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:0px;
+	padding-bottom:3px;
+	background-color: #cccccc;
+	background-repeat: repeat-x;
+	height:20px;
+}
+
+
+
+/* Class for input box style. used on login form */
+.box {
+border:1px solid #444444;
+}
+
+/* General border class */
+.border {
+   border: 1px solid #ffffff;
+
+}
+
+/* Copyright class */
+.copyright {
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-size:10px;
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+/* Class for message alerts sent by system */
+.alert {
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-size:12.73px;
+	color:#ff0000;
+	text-decoration:none;
+	font-weight:bold; 
+}
+
+.join {
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-size:24px;
+	color:#ff0000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+
+
+
+.bottomline {
+
+border:none;border-top:dotted 2px #9CA0AD; 
+}
+
+
+.mylog{
+float: right;
+color:#cccccc;
+
+}
+
+
+
+.textspace { text-align:left; padding-left:20px;
+
+ 
+}
+.textspace2 { text-align:left; padding-left:12.73px;
+
+ 
+}
+
+
+/* Delete pic link used in admin pic inspector */
+.dellinkpicinspect {
+	color: #900000;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: normal;
+	font-size: 12.73px;
+	text-decoration:none;
+}
+
+ .link-mailbox-sender{
+ color: #CC0000;
+ }
+
+
+
+.pcell1 {
+/* Class for cell displaying field name in portfolio information display */
+	background-color: #e7e7e7;
+	color: #000000;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: normal;
+	font-size: 12.73px;
+	text-align:left;
+	text-decoration:none;
+	padding-left:3px;
+}
+
+.pcell2 {
+/* Class for cell displaying field answer in portfolio information display */
+	background-color: #e7e7e7;
+	
+	color: #000000;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-weight: normal;
+	font-size: 12.73px; 
+	text-align:left;
+	text-decoration:none;
+	padding-left:3px;
+}
+
+/* Style to decorate table cell displaying random model pic */
+.randommodel1 {
+	border:1px inset #cccccc;
+}
+
+.randommodel2 {
+	/*border:1px inset #314F77;*/
+	background-color: #ffffff;
+}
+.rmodelname {
+	background-color: #444444;
+	color: #cccccc;
+	font-weight: normal;
+	font-size: 12.73px;
+	text-decoration:none;
+	
+}
+.thumbnail {
+width:100px;
+}
+
+.thumbnailh {
+height:100px;
+}
+
+.outset_lastx {
+	background-color: #000000;
+	border:2px;
+}
+
+.lastx {
+	background-color: #ffffff;
+}
+
+.backbutton {
+	font-weight: bold;
+	font-size: 12.73px;
+	color: #ff0000;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	text-decoration: none;
+	
+}
+.pheader {
+    background-color: #e7e7e7; text-align:left; 
+	 
+}
+
+#logo {
+position:absolute;
+z-index:1000;
+}
+
+
+h1{
+	font-size: 14px;
+}
+
+
+
+.usrnmSearch { font-size: 12.73px;	font-weight: bold; color: #000;	margin:0 auto; }
+.boxSearch {float:left; text-align:center;height:200px;}
+.boxSearchA {float:left; text-align:center;height:200px;}
+
+.photo_thumbsSearch { margin: 0px 0px 1px 17px; }
+
+.photo_thumbsSearch .boxSearch { background-color: #f1f1f1; width:144px; padding:0; margin: 0 10px 10px 0; border:0px solid #999;}
+.photo_thumbsSearch .boxSearchA  { background-color: #580000; width:144px; padding:0; margin: 0 10px 10px 0; border:0px solid #999; color: #fff; background-repeat: no-repeat; text-align: center;}
+
+.photo_thumbsSearch .boxSearch .picSearch { height:150px; padding:0; margin: 10px 0 1px 0; vertical-align:middle;}
+
+.photo_thumbsSearch .boxSearchA .picSearch { height:150px; padding:0; margin: 10px 0 1px 0; vertical-align:middle;}
+.photo_thumbsSearch .boxSearch .picSearch img {border:0px solid #666; margin: 0px 0 0 0; padding: 0; vertical-align:middle;}
+.photo_thumbsSearch .boxSearchA .picSearch img {border:0px solid #666; margin: 0px 0 0 0; padding: 0; vertical-align:super;}
+
+.photo_thumbsSearch .boxSearch .picFriends { height:160px; padding:0; margin: 5px 0; vertical-align:middle;}
+.photo_thumbsSearch .boxSearchA .picFriends { height:160px; padding:0; margin: 5px 0; vertical-align:middle;}
+
+.iconNameRow { margin: 0; padding: 0; height: 22px; text-align: center; overflow: hidden; }
+.citySearch { height:15px; font-size: 10px;}
+
+.round{display:block}
+.round *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#ffffff}
+.round1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #ffffff;
+  border-right:1px solid #ffffff;
+  background:#f2f2f2}
+.round2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #ffffff;
+  border-right:1px solid #ffffff;
+  background:#ffffff}
+.round3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #ffffff;
+  border-right:1px solid #ffffff;}
+.round4{
+  border-left:1px solid #ffffff;
+  border-right:1px solid #ffffff}
+.round5{
+  border-left:1px solid #ffffff;
+  border-right:1px solid #ffffff}
+.roundfg{
+  background:#ffffff;
+}
+
+
+
+.pager{
+font-size:16px;
+}
+
+
+
+
+TR.rowheader{color:#FFFFFF; background-color:#666666; font-size:10pt; font-weight:bold;}
+TR.rowprimary{color:#000000; background-color:#E9E9E9; font-size:10pt;}
+TR.rowsecondary{color:#000000; background-color:#FFFFFF; font-size:10pt;}
+
+TD.nav{color:#000000; background-color:#FFFFFF; width:150px;}
+TD.main{color:#000000; background-color:#e7e7e7; width:620px;}
+
+
+TD.cellprimary {color:#000000; background-color:#e7e7e7; font-size:10pt;}
+TD.cellsecondary {color:#000000; background-color:#FFFFFF; font-size:10pt;}
+
+.bodyg {color:#333333; background-color:#e7e7e7; font-size:10pt;  font-weight:normal;}
+.bodysm {color:#333333; background-color:#ffffff; font-size:8pt; font-weight:normal;}
+.bodysmbold {color:#333333; background-color:#e7e7e7; font-size:8pt; font-weight:bold;}
+.bodymd {color:#333333; background-color:#ffffff; font-size:10pt;  font-weight:normal;}
+.bodymdbold {color:#333333; background-color:#e7e7e7; font-size:10pt; font-weight:bold;}
+.bodylg {color:#333333; background-color:#e7e7e7; font-size:12pt; font-weight:normal;}
+.bodylgbold {color:#333333; background-color:#e7e7e7; font-size:12pt; font-weight:bold;}
+
+.mainimage {
+border:1px solid #CCC;
+background-color:#fff;
+padding:5px;
+}
+
+.castingsearch {
+border:1px solid #CCC;
+background-color:#f4f4f5;
+padding:5px;
+}
+
+.head_fat {
+background: #CCCCCC;
+clear:both;
+color:#333;
+font-weight:700;
+text-align:left;
+white-space:nowrap;
+margin:4px 2px 4px 0;
+padding:2px 5px 2px 0;
+
+}
+
+.small {
+font-size:85%;
+line-height:1.1em;
+}
+
+em{color:#000000; font-style:normal; font-size:9px}
+
+
+.castingcontact {
+font-size:85%;
+line-height:1.1em; text-align: right;
+
+}
+
+
+.lilla{
+font-size:85%;
+line-height:1.1em;
+color:#000000;
+}
+
+.lilla2{
+font-size:14px;
+line-height:1.1em;
+color:#000000;
+}
+
+
+ .ljus {
+color:#666;
+}
+.yo{
+font-size:13px; 
+text-decoration: none;
+border-bottom: dotted 1px #444444; 
+color:#000000;
+}
+
+
+
+
+#dotted{
+list-style: none;
+margin: 0 0 10px 0; 
+padding-left: 10px;
+margin-left: 0;
+background-color:#f1f1f1;
+}
+.biggtime{ 
+font-size:24px;
+}
+.minimeny{
+font-size:15px; 
+text-align:left;
+
+}
+
+
+.storhud {
+background: #f1f1f1;
+border:2px none #000;
+clear:both;
+font-size:24px;
+color:#333;
+font-weight:700;
+text-align:left;
+white-space:nowrap;
+margin:16px 2px 4px 0;
+padding:2px 5px;
+}
+.lpost {
+background: #ffffff;
+border:2px none #000;
+clear:both;
+color:#333;
+font-weight:700;
+text-align:left;
+white-space:nowrap;
+margin:16px 2px 4px 0;
+padding:2px 5px;
+}
+
+.title_box {
+
+height: 25px;
+
+clear:both;
+color: #000000;
+
+font-weight:700;
+text-align:left;
+margin:0 2px 4px 0;
+padding:2px 7px;
+}
+
+.medium {
+ width:320px;
+line-height:1.2em;
+font-size:12.73px;
+font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+
+}
+
+
+
+
+
+/*  rating action */
+.star-rating,
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating .current-rating{
+	background: url(../images/rating_star.gif) left -1000px repeat-x;
+	
+}
+.star-rating{
+	position:relative;
+	width:125px;
+	height:25px;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-position: left top;
+}
+.star-rating li{
+	display: inline;
+	
+}
+.star-rating a, 
+.star-rating .current-rating{
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-1000em;
+	height:25px;
+	line-height:25px;
+	outline:none;
+	overflow:hidden;
+	border: none;
+}
+.star-rating a:hover{
+	background-position: left bottom;
+}
+.star-rating a.one-star{
+	width:20%;
+	z-index:6;
+}
+.star-rating a.two-stars{
+	width:40%;
+	z-index:5;
+}
+.star-rating a.three-stars{
+	width:60%;
+	z-index:4;
+}
+.star-rating a.four-stars{
+	width:80%;
+	z-index:3;
+}
+.star-rating a.five-stars{
+	width:100%;
+	z-index:2;
+}
+.star-rating .current-rating{
+	z-index:1;
+	background-position: left center;
+}	
+
+/* SECOND STAR (ALREADY VOTED */
+
+
+.star-rating2,
+.star-rating2 a:active,
+.star-rating2 .current-rating{
+	background: url(../images/rating_star_2.gif) left -1000px repeat-x;
+}
+.star-rating2{
+	position:relative;
+	width:125px;
+	height:25px;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-position: left top;
+}
+.star-rating2 li{
+	display: inline;
+}
+.star-rating2 a, 
+.star-rating2 .current-rating {
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-1000em;
+	height:25px;
+	line-height:25px;
+	outline:none;
+	overflow:hidden;
+	border: none;
+	cursor:default;
+}
+
+.star-rating2 a.one-star{
+	width:20%;
+	z-index:6;
+	
+}
+.star-rating2 a.two-stars{
+	width:40%;
+	z-index:5;
+}
+.star-rating2 a.three-stars{
+	width:60%;
+	z-index:4;
+}
+.star-rating2 a.four-stars{
+	width:80%;
+	z-index:3;
+}
+.star-rating2 a.five-stars{
+	width:100%;
+	z-index:2;
+}
+.star-rating2 .current-rating{
+	z-index:1;
+	background-position: left center;
+}
+
+
+/* END SECOND STAR */
+
+/* for an inline rater */
+.voted_twice {
+	background: #FFDDDD url(../images/rating_warning.gif) no-repeat 5px 50%;
+	padding:5px 5px 5px 16px;
+	text-align:center;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	color:#333;
+	width:130px;
+	font-size:12.73px;
+	}
+
+		
+.voted {
+	background: #E7FFCE url(../images/rating_tick.gif) no-repeat 5px 50%;
+	padding:5px 5px 5px 16px;
+	text-align:center;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	color:#333;
+	width:130px;
+	font-size:12.73px;
+	}
+/* The text that displays the rating information */
+.rated_text {
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	font-size:12.73px;
+	margin-bottom:5px;
+	color:#666;
+	}
+/* Green text that shows 3.34/5 */
+.out5Class {
+	color:#00CC00;
+	font-weight:bold;
+	}
+.percentClass {
+	/* Insert styles here for the percentage display. Example (74%) */
+	}
+.votesClass {
+	/* Insert styles here for the votes display. Example (2 Votes) */
+	}
+
+tr.d0 td {
+	background-color: #f1f1f1; 
+	
+	 
+}
+ tr.d1 td {
+	background-color: #f9fbff;
+}
+
+
+tr.e0 td {
+	background-color: #f9fbff; 
+	
+	 
+}
+ tr.e1 td {
+	background-color: #f1f1f1;
+
+} /*new stuff */
+table.navbarwrap {
+width:800px; 
+font-weight:700;
+background:#000;
+margin-left:auto;
+border-top:1px solid #000;
+border-bottom:1px solid #000;
+margin-right:auto;
+}
+
+table.navbar {
+margin:0;
+}
+
+.lineit { 
+color:#000; font-size:12.73px; 
+border-right:1px solid #666; 
+
+}
+.navbar a:link,.navbar a:visited,.navbar a:active {
+color:#fff;
+}
+
+.navbar a:hover,.numbers a:link,.numbers a:visited,.numbers a:active,.numbers a:hover {
+text-decoration:none;
+}
+.lineit a {
+color:#fff;font-size:12.73px; font-weight:bold;
+display:block;
+position:relative;
+text-decoration:none;
+padding:2px 10px;
+}
+
+.lineit a:hover {
+background-color:#292B2C;
+}
+.logozoid {
+background:#FFF;
+width:800px;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.dotz {
+color:#000;
+background:#F5F5F5;
+border:2px dotted orange;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:5px;
+padding:5px;
+}
+
+
+#loginbox {
+border:1px solid #cccccc;
+margin:2px 2px 2px 2px;
+width:298px;
+background-color:#f4f4f5;
+
+}
+
+#loginbox2 {
+margin:12px 12px 12px 12px;
+width:auto;
+
+}
+.inputfield {
+
+background-color:#fff;
+width: 170px;
+
+}
+
+.small {
+font-size:85%;
+line-height:1.1em;
+}
+
+
+.smalltext {font-size: 10px; font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;}
+
+.forumpath { font-size: 12.73px; line-height: 1.3em; vertical-align:middle; padding: 6px 6px 6px 15px; color: #000000; background-color: #ffffff; font-weight: bold; margin-bottom: 10px; font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;text-align:left;}
+.forumpath a {font-size: 13px; font-weight: bold; color: #0018a5; text-decoration:underline;}
+
+.linkbutton {overflow: visible; border: 0px inset; background-color: transparent; font-family: tahoma, arial, verdana; font-size: 12.73px; font-weight: bold; color: #0018a5; text-decoration: none; cursor: pointer; padding-left: 10px;}
+.linkbutton:hover{text-decoration:underline;}
+.inputtextbox {height: 20px; background-color: #fff; border: #000 1px solid;}
+.inputbutton {height: 20px; background-color: #333; border: #999 1px solid; margin: 0px; color: #fff; font-weight: bold; font-family: verdana, tahoma, arial; font-size: 12.73px; padding-bottom: 1px;}
+
+.navtable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; background-color: #ffffff; display: table; width: 99%; border-spacing: 0px; border-collapse: collapse;}
+.navtable td { padding-top:7px;}
+.logtable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; width: 100%; border-spacing: 0px; border-collapse: collapse;}
+.logtable td {padding: 7px;}
+
+.formstyle {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; margin: 0px; padding: 0px; display: inline;}
+.formfield {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; background-color: #e5ecf9; border: #fff 1px solid; text-align: right; color: #000; width: 20%; font-weight: bold;}
+.formcell0 {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; background-color: #F5F7FB; border: #fff 1px solid; text-align: left; color: #444444;}
+.formcell0 a {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; color: #36c;}
+.formcell1 {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; background-color: #F5F7FB; border: #fff 1px solid; text-align: left; color: #444444;}
+.formcell1 a {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; color: #36c;}
+.formtable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; display: table; width: 100%; border-spacing: 0px; border-collapse: collapse;  border: 1px #CCD7ED solid;}
+.formtable td {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; padding: 5px 10px 5px 10px;}
+.formtitle {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; border: 1px #fff solid; background-color: #f9fbff; color: #000000; padding: 4px; font-size: 12.73px; font-weight: bold; text-align:left;}
+.formtitle a {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; color: #000;}
+
+.error {padding: 5px; margin: 5px; color: red; background-color: #e5ecf9; border: #eee 1px dashed; display: block; text-align: center; font-weight: bold; font-size: 14px; font-family: arial;}
+.message { padding: 20px; margin: 5px; color: #36c; background-color: #f4f4f5; border: #eee 1px dashed; display: block; text-align: center; font-weight: bold; font-size: 14px; font-family: arial;}
+.message a {text-decoration: underline; font-family: arial, verdana, tahoma; font-size: 12.73px; color: #36c;}
+
+.forumtable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; display: table; width: 100%; border: 1px #CCD7ED solid;}
+.forumtitle {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; border: 1px #fff solid; background-color: #f9fbff; color: #000; padding: 5px; font-size: 12.73px; font-weight: bold; text-align: left;}
+.forumcell {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; padding: 5px 5px 5px 5px; font-size: 12.73px; border-left: 1px #fff solid; border-top: 1px #fff solid; border-bottom: 1px #eee solid; border-right: 1px #eee solid;}
+
+.forumcat {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; border: 1px #fff solid; padding: 5px 5px 5px 10px; background-color: #ffffff; font-size: 12.73px; font-weight: normal; color: #666666;}
+.forumcat a {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-weight: bold; font-size: 12.73px; color: #000; text-decoration: none;}
+.forumlink {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-weight: bold;  font-size: 12.73px; text-decoration: none; color: #0018a5;}
+.forumrow0 {background-color: #F5F7FB;}
+.forumrow1 {background-color: #F5F7FB;}
+
+.pagination {font-family: Verdana;  font-size: 12.73px; margin-top: 10px; margin-bottom: 10px; width: 100%; color: #000;}
+.pagination a {font-family: Verdana;  font-size: 12.73px; text-decoration: underline; color: #000;}
+
+.bbbuttons {font-family: times new roman, arial, verdana; border: 1px #fff solid; background-color: #F5F7FB;}
+
+
+
+table td .bbbuttons {padding: 10px;}
+.bbbuttons a {font-family: times new roman, arial, verdana; padding: 2px 5px 2px 5px; font-size: 12.73px; border: 1px #CCD7ED solid; background-color: #e5ecf9; color: #36c; text-decoration: none;}
+
+.smiliesbar {margin: 5px 5px 5px 0px; font-family: arial, verdana; border: 1px #fff solid; background-color: #F5F7FB;}
+.smiliesbar a {
+font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; margin: 2px; padding-bottom: 5px; font-weight: bold; color: #36c;
+}
+
+.smiliestable {display: table; width: 100%; border-spacing: 0px; border-collapse: collapse; border: 1px #CCD7ED solid;}
+.smiliecell {padding: 5px 5px 5px 30px; border: 1px #CCD7ED solid; background-color: #F5F7FB;}
+
+.code {border: 1px #000 solid; background-color: #000; color: #80FF80; padding: 10px; margin: 15px; font-size: 12.73px; font-family: verdana;}
+
+.subforums {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; padding-left: 5px;}
+.subforums a {font-size: 12.73px;}
+
+.topiclink {font-size: 12.73px; font-family: arial; font-weight: bold; text-decoration: underline; color: #36c;}
+sup .topiclink {font-family: arial, tahoma; text-decoration: none; font-size: 12.73px; font-weight: normal;}
+
+.topictable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; display: table; width: 100%; border: 1px #CCD7ED solid; }
+.topictitle {border: 1px #fff solid; background-color:#f9fbff; color: #000; padding: 5px; font-size: 10px; font-weight: bold; text-align: center; font-family: verdana;}
+.topiccell {padding: 5px 5px 5px 5px; border-left: 1px #fff solid; border-top: 1px #fff solid; border-bottom: 1px #eee solid; border-right: 1px #eee solid; font-size: 12.73px;}
+.topicrow0 {background-color: #F5F7FB;}
+.topicrow1 {background-color: #F5F7FB;}
+
+.topiccommands {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; text-align: center; background-color: #f9fbff; padding-top: 5px; padding-bottom: 5px; color: #000000;}
+.topiccommands a {font-size: 12.73px; font-weight: bold; color: #000000;}
+
+.posttable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; display: table; width: 100%; border-spacing: 0px; margin-bottom: 5px; border: 1px #CCD7ED solid;}
+.posttitle {background-color: #f9fbff; color: #000; padding: 4px; font-size: 12.73px; text-align:left;}
+.posttitle a {color: #000;}
+.postauthor {background-color: #e5ecf9; padding: 2px 10px 2px 10px; font-size: 12.73px;}
+.postrow0 {background-color: #F5F7FB;}
+.postrow1 {background-color: #F5F7FB;}
+.posttext {padding: 4px; font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px;}
+
+.memberbutton {display: inline; overflow: visible; border: 0px inset; background-color: transparent; font-family: arial, verdana; font-size: 12.73px; font-weight: bold; color: #c30; text-decoration: underline; cursor: pointer; padding: 0px; margin: 0px;}
+.selectbox {font-size: 12.73px; font-family: arial;}
+
+.statstable {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; display: table; width: 100%; margin-bottom: 5px; border: 1px #CCD7ED solid; margin-top: 20px;}
+.statstitle {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; background-color: #f9fbff; color: #000; padding: 4px; font-size: 12.73px;}
+
+.statscell {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; background-color: #F5F7FB; padding: 10px;}
+.centerme {
+background:#FFF;
+width:800px;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.blogtitledate{ font-size:10px; color:#999999;
+}
+.castingprof{ font-size:10px; color:#444444;
+}
+.pagination{
+padding: 2px;
+
+}
+
+.pagination ul{
+margin: 0;
+padding: 0;
+text-align: right; /*Set to "right" to right align pagination interface*/
+font-size: 12px;
+
+}
+
+.pagination li{
+list-style-type: none;
+display: inline;
+padding-bottom: 1px;
+padding: 1px; background-color: #f1f1f1;
+}
+
+.pagination a, .pagination a:visited{
+padding: 1px 5px; 
+border: 1px solid #9aafe5;
+text-decoration: none; 
+color: #2e6ab1;
+}
+
+.pagination a:hover, .pagination a:active{
+border: 1px solid #2b66a5;
+color: #000;
+}
+
+.pagination li.currentpage{
+font-weight: bold;
+padding: 0 5px;
+border: 1px solid navy;
+background-color: #2e6ab1;
+color: #FFF;
+}
+
+.pagination li.disablepage{
+padding: 0 5px;
+border: 1px solid #929292;
+color: #929292;
+}
+
+.pagination li.nextpage{
+font-weight: bold;
+}
+/* search results */
+.result {
+        border: solid 1px #CCCCCC;
+		background-color: white;
+        padding: 10px; 		
+        margin: 0px 0px 8px;
+		width: 780px; 
+}
+.resulthead {
+		background-color: white;
+    	margin: 0px 10px 8px;
+		width: 780px; padding-bottom:5px; 
+}
+
+
+.searchhead {
+       padding-right: 10px; padding-left: 10px; 
+       width: 70px;
+       font-size: 90%;
+	   font-weight: bold; text-align:left;
+}
+.resultsname {
+padding-left:10px;
+ font-size: 90%;
+}
+/* end search results */
+
+
+/* friends request and myfriends.php  */
+.grid_boxinside { float:left; height:18em;  border:1px solid #CCC; text-align:center; position:relative; padding-top:.67em;margin:0 .4em .4em 0; }
+.grid_boxinside div.user_img { width:10em; height:10em; margin:0 .67em .33em .67em; overflow:hidden; }
+
+
+.row { clear:both; }
+#inner-container {
+	width : 780px ;
+	margin : 0px auto ;
+	text-align : left ;
+	
+	
+}
+
+
+/* end my friends and request grid layouts */
+
+
+.head_zoid {
+background:url(../images/head.gif) #F4F4F5 repeat-x;
+border:1px solid #CCC;
+clear:both;
+color:#333;
+font-weight:700;
+text-align:center;
+white-space:nowrap;
+margin:4px 2px 4px 0;
+padding:2px 5px 2px 0; 
+}
+
+.footer {font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; font-size: 12.73px; text-align: center; margin-top: 10px;}
+
+.footer a {font-size: 12.73px; color: #0018a5;}
+.footerb { 
+width: 800px; 
+text-align:center;
+background: #000000; 
+}
+div .sociable { margin: 0 0; display:inline }
+
+span.sociable_tagline { position: relative; }
+span.sociable_tagline span { display: none; }
+span.sociable_tagline:hover span {
+	position: absolute;
+	display: block;
+	top: -5em;
+	background: #ffe;
+	border: 1px solid #ccc;
+	color: black;
+	line-height: 1.25em;
+}
+
+.sociable span { display: block; }
+.sociable ul { display: inline; padding:0px; margin:0px; }
+.sociable li {
+	background: none;
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 2px;
+}
+.sociable ul li:before { content: ""; }
+.sociable img { border: 0; }
+ 
+.head_top {
+background:url(../images/head.gif) #F4F4F5 repeat-x;
+border:1px solid #CCC;
+clear:both;
+color:#333;
+font-weight:700;
+text-align:left;
+white-space:nowrap;
+margin:0 2px 4px 0;
+padding:2px 5px;
+}
+
+.bResultH1{font-weight:bold; color: #990001; font-size:18px; position:relative; margin:0 0 12px 0;}
+.bResultH1 a{color:#656565; text-decoration:none;}
+
+
+.refineSearch {position:relative; background:#eee;}
+.refineSearch div{position:absolute; right:1px; top:1px; background:#918FD0; margin:0; padding:1px 2px; border:1px solid #3228A7;}
+.refineSearch div a{text-decoration:none; color:#fff; font-weight:bold; font-size: 11px;}
+
+.refineSearchBottom {position:relative; background:#eee; height:32px; padding-top:8px; white-space:nowrap;}
+.refineSearchBottom div{float:right;width:100px; height:18px; background:#918FD0; margin:0; padding:1px 2px; border:1px solid #3228A7;}
+.refineSearchBottom div a{text-decoration:none; color:#fff; font-weight:bold; font-size: 11px;}
+
+
+
+div.albumBlockHeader{position:relative;}
+div.albumBlockHeader span{position:absolute; right:8px;}
+div.albumBlockHeader a{text-decoration:none; font-size:11px;}
+.head_top h1, .head_top h2{margin:0; padding:0; color:#333; font-weight:bold; font-size:14px;}
+
+.head_top .paginate{position:relative;}
+.head_top .paginate span{position:absolute;right:8px; top:1px; margin:0; padding:0;}
+.align-right { text-align:right; }
+#searchtable {
+background-color: #f5f5f5; text-align:left;
+	
+}
+.searchheader { font-weight: 700; font-size: 90%; WIDTH: 120px; background-color: #e1e4ea; text-align: right;
+}
+#albumWrap {
+width:780px;
+margin-left:auto;
+margin-right:auto; 
+padding:0; background-color:#fff;
+}
+#new_photos{
+float:left;
+padding-right:18px;
+font-family: Trebuchet, Verdana, Lucida Grande, Sapir Sans, Tahoma, Sans-Serif;
+font-size:11px;
+line-height:13px;
+color:#FFF;
+
+}
+#new_members {
+background:url(../images/head.gif) #F4F4F5 repeat-x;
+border:1px solid #CCC;
+clear:both;
+color:#333;
+font-weight:700;
+text-align:left;
+white-space:nowrap;
+margin:0 2px 4px 0;
+padding:2px 5px;
+float: left;
+width:382px;
+
+}
+#new_members h2{margin:0; padding:0; color:#333; font-weight:bold; font-size:14px;}
+.head {
+background: #f1f1f1;
+
+clear:both;
+color:#000; 
+font-size:12px;
+text-align:left;
+
+
+}
+#head-r {
+float:right;
+padding-top:1px;
+}
+#head2 {
+float:left;
+}
+#main-menu {
+background:#000;
+width:800px;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.search-number{
+color:#fff;
+font-weight:bold; vertical-align:middle;
+}
+#menu-r {
+
+float:right;
+background:#000;
+width:150px;
+height:21px;
+}
+#menu-l {
+background:#000;
+float:left;
+width:650px; 
+height:21px;
+}
+
+.menu-input {
+width:80px;
+border:1px solid #999;
+background:#333;
+color:#fff;
+font-size:9px;
+}
+#menu1{
+background:000;
+}
+#jsddm
+{	margin: 0;
+	padding: 0;
+	width:auto;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; 
+	
+	}
+	
+#jsddm li
+	{	float: left;
+		list-style: none;
+		font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; 
+	}
+
+#jsddm li a{	
+display: block;
+border-right: 1px solid #666;
+background: #000;
+color: #fff;
+padding-right:20px;
+	color: #e7e7e7;
+	font-size:12.73px;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif; 
+	font-weight:bold;
+	padding:2px 10px;	
+		
+		}
+
+#jsddm li a:hover
+	{	background: #292B2C;
+	
+	}
+		
+#jsddm li ul{	
+margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			border-top: 1px solid black;
+			z-index:1000;
+			
+			}
+		
+#jsddm li ul li
+		{	float: none;
+			display: inline}
+		
+#jsddm li ul li a{	
+		width: auto;
+			background: #000;
+			}
+		
+#jsddm li ul li a:hover{
+			background: #292B2C;
+			
+}
+
+.quotecode {
+width:90%;
+border:1px solid #333;
+font-size:95%;
+
+background-color:#F9FBFF;
+margin:8px 0 2px 14px;
+padding:6px;
+} 
+
+.maintable {
+width:100%;
+background-color:#FFF;
+margin-left:auto;
+margin-right:auto;
+padding:15px 24px 16px; 
+vertical-align: top;
+
+}
+.lasttable {
+background-color:#FFF; border-left-style:none;
+}
+
+.small_link
+{
+	font-size:85%;
+line-height:1.1em;
+    color: #666666;
+}
+.forumdesc {
+	font-size:85%;
+line-height:1.1em;
+    color: #666666;
+}
+.forum-top {
+
+border:none;border-top:solid 1px #9CA0AD; 
+}
+.forum-bottom-dotted{
+border:none;border-top:dotted 1px #9CA0AD; 
+}
+.forum-bottom {
+border-bottom:1px dashed #9CA0AD;
+}
+
+.postpad {
+padding:6px 10px 8px 9px;
+}
+
+#post {
+padding:10px 6px 8px 8px; overflow:hidden; width:800px;
+}
+
+.postwrap {
+border-bottom:1px dashed #9CA0AD;
+}
+.quote {
+width:90%;
+border:1px solid #333;
+font-size:95%;
+background-color:#F9FBFF;
+margin:0 0 2px 14px;
+padding:6px;
+}
+
+
+
+.inputtextbday{
+ border-color: #96A6C5;
+  border: 1px solid #BDC7D8;
+    font-size: 16px;
+	    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+		padding:3px;
+		
+
+}
+
+
+
+#reg_box {
+    margin: 0;
+	padding-left:24px;
+	width:100%;
+}
+
+
+#reg_box .inputtext, #reg_box .inputpassword .select {
+    border-color: #96A6C5;
+    margin-top: 2px;
+    width: 220px;
+	font-size: 16px;
+	border: 1px solid #BDC7D8;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    padding: 3px;
+}
+#reg_box .inputextreg {
+    border-color: #96A6C5;
+    margin-top: 2px;
+    width: 228px;
+	font-size: 16px;
+	border: 1px solid #BDC7D8;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    padding: 3px;
+}
+
+
+#reg_box selectDB {
+    margin: 2px 0 0;
+	 border-color: #96A6C5;
+	 border: 1px solid #BDC7D8;
+	 font-size: 16px;
+
+}
+
+#reg_box #birthday_warning {
+    font-size: 9px;
+    margin-left: 1px;
+}
+.statusmenu {
+	background-color:#eeeeee;
+	color: #444444;
+	font-size:12.73px;
+	font-family:Trebuchet, Verdana, "Lucida Grande", "Sapir Sans", Tahoma, Sans-Serif;
+	padding-left:10px;
+	padding-top:3px;
+	padding-bottom:3px;
+	height:30px;
+	width:100%;
+}
+#choose_theme { text-align:center;
+}
+
+
+#country_selector{
+position:absolute;
+left:0px;
+top:0px;
+width:83px;
+height:83px;
+	
+}
+
+.upgrd { background-image:url(../images/vip-ranks.png); }
+
+
+a.vippic{
+  width: 211px;
+  text-decoration:none;
+  position:relative;
+  display:block;
+}
+a.vippic span.vip-icon{
+  position:absolute;
+  background-position:top right;
+  top:0;
+  right:0;
+}
+.regbutton {
+background: url('../images/registerbutton.gif') no-repeat;
+width: 80px;
+height: 28px;
+border: 0px;
+border: 0;
+}
+

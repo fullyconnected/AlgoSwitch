@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>{title}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+{metacontent}
+<link href="{relative_path}templates/admin/css/adminstyle.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{relative_path}templates/admin/css/easyui.css">
+<link rel="stylesheet" type="text/css" href="{relative_path}templates/admin/css/icon.css">
+
+	<script type="text/javascript" src="{relative_path}templates/admin/js/jquery-latest.js"></script>
+
+	<script type="text/javascript" src="{relative_path}templates/admin/js/jquery.easyui.min.js"></script>	
+	<script type="text/javascript" src="{relative_path}templates/admin/js/datagrid-detailview.js"></script>
+	<script type="text/javascript" src="{relative_path}templates/admin/js/users.js"></script>
+
+</head>
+
+<body>
+<div align="center">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+
+<tr>
+  <td width="16%" valign="top">
+  
+<table cellspacing="1" cellpadding="3" width="93%" border="0">
+   
+    <tr>
+      <td width="58%" class="tdgrey"><a href="{relative_path}"><strong>Site Admin</stong></a></td>
+      <td width="42%" class="tdgrey"><a href="{relative_path}admin/logout.php"><b>Log Out</b></a></td>
+    </tr>
+    <tr>
+      <td height="20" colspan="2" valign="top" class="menus"><a class="menulinks" href="{relative_path}admin/site_options.php">Site options</a></td>
+      </tr>
+   
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/featured_setup.php">Featured Members</a></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/changeadminupass.php">Change Admin Email/Pass</a></td>
+    </tr>
+   
+    <tr>
+      <td colspan="2" valign="top" class="tdgrey"><b>Monitoring Tools</b></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/pic_inspector.php">Picture Reviewer</a></td>
+    </tr>
+   
+   <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/clean_inboxes.php">Clean inboxes</a></td>
+    </tr>
+   
+   
+    <tr>
+      <td height="20" colspan="2" valign="top" class="tdgrey"><b>Messages</b></td>
+    </tr>
+     <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/send_email.php">Send email</a></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/send_message.php">Send internal message</a></td>
+    </tr>
+    <tr>
+      <td height="20" colspan="2" valign="top" class="tdgrey"><b>Management Tools</b></td>
+    </tr>
+       <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/users/">Members</a></td>
+    </tr>
+
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/approveme.php">New Member Approval</a></td>
+    </tr>
+     <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/suspend.php">Suspend Members</a></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/unsuspend.php">Unsuspend Members</a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/change_pass.php">Change a user's pass</a></td>
+    </tr>
+     <tr>
+      <td colspan="2" class="menus"><a class="menulinks" href="{relative_path}admin/edit_templates.php">Edit Templates</a></td>
+    </tr>
+    
+    
+    
+   
+  </table></td>
+  <td width="84%" valign="top">
+<font class="alert">{message}</font>
+
+	
+
+
+
+{content}
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+{message}
+
+
+<div>
+<form method="get" name="myform" action="{relative_path}index.php">
+  
+  <select name="radius"> 
+  {accepted_miles}
+  </select> 
+  
+  <br />
+
+    <br />
+  <select name="length">
+  
+  {accepted_radiustext}
+ 
+  </select>
+
+
+ <button type="submit" class="btn btn-primary">{lang.SEARCH}</button>
+</form></div>
+    <div class="row-fluid">
+<loop name="foundmembers">
+
+<hr>
+            
+      <article>
+        <div class="row-fluid">
+          <div class="span4">
+    <a href="{siteURL}/{foundmembers.profilelink}"><img src="{foundmembers.picture}" alt="{foundmembers.name}" width="100%" /></a> </div>
+        <div class="span8">
+          <header>
+            <h2><a href="{siteURL}/{foundmembers.profilelink}">{foundmembers.name}</a></h2>
+          </header>
+          <div class="entry-content">
+          
+          <div>
+          {lang.SEARCH_CHOOSE_GENDER} {foundmembers.gender}
+          
+          
+          </div>
+          
+          
+          
+          <div>
+          
+          {lang.SEARCH_AGE}: {foundmembers.age}
+          </div>
+          
+          <div>
+          
+          {lang.SEARCH_RESULTS_LOCATION}: {foundmembers.country} {foundmembers.state} {foundmembers.city}
+          </div>
+        
+        
+        
+          <div>
+          Distance:
+          {foundmembers.distance}
+          </div>
+          
+        
+        
+          <div>
+          
+
+          <a href="{siteURL}/mail_send.php?user_id={foundmembers.user_id}" class="btn btn-red btn-mini">{lang.SEARCH_SEND_MESSAGE}</a><br>
+
+          <a href="{siteURL}/pics.php?user_id={foundmembers.user_id}" class="btn btn-yellow btn-mini">{lang.SEARCH_VIEW_PHOTOS}</a><br />
+
+          <a href="{siteURL}/friends.php?uid={foundmembers.user_id}" class="btn btn-greeen btn-mini">{lang.SEARCH_VIEW_FRIENDS}</a><br />
+
+          <a href="{foundmembers.addfriendlink}">{foundmembers.addfriendtext}</a>
+          
+          <span class="btn btn-primary btn-mini">{foundmembers.last_visit}</span>
+          </div>
+        
+          
+          
+          
+          
+          </div>
+        </div> 
+      </div>
+    </article>
+    
+       
+</loop name="foundmembers"> 
+<div class="paginationlinks">
+
+<div class="pager"><ul>
+      <li class="nextpage"></li>
+      <li class="nextpage">{prev}</li>
+    
+      <li class="nextpage">{next}</li>
+      <li class="nextpage"> </li></ul>
+      
+      </div>
+      
+</div>
+     
+     
+

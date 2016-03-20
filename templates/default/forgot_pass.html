@@ -1,0 +1,22 @@
+{message}
+
+
+ <legend>{lang.FORGOT_PASSWORD_HEADER}</legend>
+  
+	<p>
+	{lang.FORGOT_PASSWORD_PAGE_TEXT} {sitename}<br />
+	</p>
+
+
+<form method="post" name="myform" action="{relative_path}processors/forgot_pass.php">
+<b>{lang.FORGOT_PASSWORD_EMAIL_TEXT}: </b>
+
+
+<input type="text" name="email"></td>
+
+
+<br /> {scode}  <br />
+
+<input id="security_code" name="security_code" type="text" />
+	       
+<input class="btn btn-primary" type="submit" value="{lang.FORGOT_PASSWORD_SEND_TEXT}" />

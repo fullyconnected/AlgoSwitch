@@ -1,0 +1,6 @@
+{notice}
+
+If you are having problems with our website please contact us at: {contactusmail}
+
+{sitename}
+{baseurl}

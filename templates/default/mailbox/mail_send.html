@@ -1,0 +1,97 @@
+<script type="text/javascript">
+	function checkform() {
+		var the=document.myform;
+		if (the.to.value=="") {
+			alert('You must enter the name of the member you want to send the message to.');
+			the.to.focus();
+			return false;
+		}
+		if (the.subject.value=="") {
+			alert('Please enter a subject for your message.');
+			the.subject.focus();
+			return false;
+		}
+		if (the.writehere.value=="") {
+			alert('You must write something in the message body.');
+			the.writehere.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+
+
+{message}
+
+<table class="table">
+
+  <tr>
+  <td> 
+  <a class="btn btn-mini" href="mailbox.php?mailbox=inbox">{lang.MAIL_INBOX}</a> 
+  <a class="btn btn-mini" href="mailbox.php?mailbox=outbox">{lang.MAIL_OUTBOX}</a> 
+  <a class="btn btn-mini" href="mailbox.php?mailbox=savedbox">{lang.MAIL_SAVED_BOX}</a>&nbsp;
+  <a class="btn btn-mini" href="mail_blocked.php">{lang.MAIL_BLOCKED}&nbsp;</a>
+  </td>
+  </tr>
+      <tr>    
+        <td>
+       {lang.MAIL_WRITE_MESS}
+        </td>
+      </tr>
+    </table>
+
+
+
+
+<table class = "table" width="100%" border="0"  >
+
+<tr>
+	<td bgcolor="#f4f4f5" width="1%">{lang.MAIL_TO}:</td>
+	<td align="left">
+    <form method="post" name="myform" id="myform" action="processors/mail_send.php" onsubmit="return(checkform())">
+    <input class="input-block-level" type="text" name="to" value="{to}" /> </td>
+</tr>
+<tr>
+	<td >{lang.MAIL_SUBJECT}:</td>
+	<td align="left">
+  
+  
+  <input class="input-block-level" type="text" name="subject" value="{subject}" width="100%" /></td>
+</tr>
+<tr>
+	<td colspan="2">
+  
+  
+  <textarea class="input-block-level" name="writehere" rows="8"  class="xxlarge">{body}</textarea></td>
+
+</tr>
+
+
+<tr>
+	<td colspan="2">
+  
+  
+  <label class="checkbox">
+  <input type="checkbox" name="save">
+{lang.MAIL_SAVE_MESS}
+  </label>
+  
+
+
+  
+   <input type="submit" class="btn btn-warning pull-right" value="{lang.MAIL_SEND}" />
+   
+   
+   
+   
+   </form></td>
+</tr>
+
+
+</table>
+
+</table>
+
+
+
+

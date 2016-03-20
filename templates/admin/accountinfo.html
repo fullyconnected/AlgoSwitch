@@ -1,0 +1,55 @@
+<div class="vitbg"><br /><font class="alert">{message}</font>
+
+<table width="800" border="0" bgcolor="#FFFFFF">
+<tr>
+<td width="88%" align="left"><img src="{relative_path}images/rarrow.gif" border="0" alt="{name}" /> <b>Edit Account</b></td>
+
+
+<td width="12%" align="left"></td>
+</tr>
+</table>
+
+<div class="head_zoid"></div>
+
+<form method="post" name="myform" id="myform" action="{relative_path}processors/accountinfo.php" onsubmit="return(checkform())">
+<table align="center" cellspacing="12" cellpadding="1" width="800" bgcolor="#FFFFFF" border="0">
+<td bgcolor="#e1e4ea" align="left" width="169">First Name
+<td align="left"><input type="text" name="firstname" value="{firstname}" size=25 maxlength=50></td>
+
+
+
+
+<input type="hidden" name="step" value="1" />
+
+
+<tr>
+<td bgcolor="#e1e4ea" align="left">Lastname</td>
+
+<td width="615" align="left"><input type="text" name="lastname" value="{lastname}" size=25 maxlength=50></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Stage/Screen Name</a></td><td align="left"><input type="text" name="name" value="{name}" size="25" maxlength="30"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Gender:</td><td align="left"><select name="gender" size="1">{gender_options}</select></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Country of birth</td><td align="left"><select name="country" size="1">{country_options}</select></td></tr><tr>
+
+<td bgcolor="#e1e4ea" align="left">State (US residents)</td><td align="left"><select name="us_state">{usstate_options}</select></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">City of residence</td><td align="left"><input type="text" name="city" value="{city}" size="25" maxlength="100"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Zip/Postal Code</td><td align="left"><input type="text" name="zip" value="{zip}" size="25" maxlength="35"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Street Address</td><td align="left"><input type="text" name="addr" value="{addr}" size="35" maxlength="150"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Phone #1</td><td align="left"><input type="text" name="phone1" value="{phone1}" size="25" maxlength="30"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Phone #2</td><td align="left"><input type="text" name="phone2" value="{phone2}" size="25" maxlength="30"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Website:</td><td align="left"><input type="text" name="website" value="{website}" size="25" maxlength="150"></td></tr><tr>
+<td bgcolor="#e1e4ea" align="left">Birthdate:</td>
+	<td align="left">
+		<select name="birthmonth" size="1">
+		{birthmonth_options}
+		</select>
+		<select name="birthday" size="1">
+		{birthday_options}
+		</select>
+		<select name="birthyear" size="1">
+		{birthyear_options}
+		</select>	</td>
+    </tr>
+    <tr>
+<td></td><td align="center"><input  class="aptbutton" type="submit" value="Save"></td></tr></table>
+<br /><br /><br /><br /><br />
+</table>
